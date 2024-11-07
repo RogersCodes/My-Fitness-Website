@@ -4,6 +4,7 @@ import './contact.css';
 function Contact() {
     return (
         <div className="contact">
+            <h2 className="contact-title">Rogers Fitness Club</h2>
            <ul className="contact-list">
                 <li className="contact-list-item"><a href="/">Home</a></li>
                 <li className="contact-list-item"><a href="/workouts">Workouts</a></li>

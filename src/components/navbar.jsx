@@ -7,7 +7,7 @@ function Navbar() {
     <header>
       <nav className="navbar">
         <div className="navbar-container">
-        <h2 className="header-title">Rogers Fitness Club</h2>
+          <h2 className="header-title">Rogers Fitness Club</h2>
           <ul className="navbar-list">
             <li><NavLink to="/" activeClassName="active">Home</NavLink></li>
             <li><NavLink to="/workouts" activeClassName="active">Workouts</NavLink></li>
