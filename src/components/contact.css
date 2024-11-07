@@ -9,8 +9,8 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     position: relative;
-    height: auto;
     width: 100%;
     flex-direction: row;
     padding: 0;
@@ -20,9 +20,26 @@ html, body {
     font-family: "Aoboshi One", serif;
     font-style: normal;
     font-weight: bold;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 30px;
 }
 .contact-list-item {
-    margin-right: 20px;
+    margin-right: 90px;
+}
+.contact-list-item a {
+    text-decoration: none;
+    color:#735a5a;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-size: 18px;
+}
+.contact-list-item a:hover {
+    color:#312c2c;
 }
 .contact-images {
     display: flex;
@@ -31,4 +48,10 @@ html, body {
     gap: 70px;
     padding: 40px;
     margin-right: 100px;
+}
+.instagram-image,
+.x-image,
+.email-image {
+    width: 40px; 
+    height: 30px;
 }
