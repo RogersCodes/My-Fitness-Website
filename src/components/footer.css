@@ -1,0 +1,63 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.footer {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(95, 101, 110, 0.5);
+}
+.footer-text {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    font-weight: bold;
+    
+}
+.email-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.highlight-footer-text {
+    color: #A01818;
+}
+.email-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+}
+.footer-input{
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    width: 400px;
+}
+.email-button {
+    height: 40px;
+    width: 200px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    color: #E8CDCD;
+    background-color: #2A2222;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.email-button:hover {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+}

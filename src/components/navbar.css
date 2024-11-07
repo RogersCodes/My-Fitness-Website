@@ -1,0 +1,80 @@
+.navbar {
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+}
+.navbar a.active {
+    border-bottom: 4px solid #dbcbcb;
+}
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    background-color: #2C2626;
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    margin-top: 0;
+    padding: 10px 0;
+}
+ul h2, ul li {
+    margin-right: 20px;
+}
+ul li a, ul li button {
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.login-button {
+    margin-right: 150px;
+    background-color: #847575;
+    color: white;
+    border-radius: 8px;
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.login-button:hover {
+    background-color: #5B4848;
+    color: #000000;
+}
+ .header-title {
+    color: #7E686A;
+    font-size: 30px;
+}
+ul li a {
+    color: #847575;
+}
+a:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+.signup-button {
+    background-color: #847575;
+    color: #000000;
+    font-family: "Aoboshi One", serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.signup-button:hover {
+    background-color:#5B4848;
+    color: #FFFFFF;
+}
+.navbar a,
+.navbar button {
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar button:hover {
+    text-decoration: none;
+}
+
