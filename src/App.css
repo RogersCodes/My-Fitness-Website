@@ -444,6 +444,20 @@ body, html {
     margin-top: 10px;
     color: #403e3e;
 }
+/*FAQS Page Styling */
+main {
+    background-color: #f6eaea;
+}
+.faqs-header {
+    margin-top: 80px;
+  }
+.faqs {
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    width: 70%;
+    margin-left: 180px;
+    padding: 10px;
+}
 /* error page styling */
 .error-page {
     background-color: #ffffff ;
