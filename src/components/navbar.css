@@ -15,6 +15,7 @@
 .header-title {
     white-space: nowrap;
     font-size: 40px;
+    margin: 0;
 }
 .navbar-list .active {
     border-bottom: 4px solid #dbcbcb;
@@ -24,7 +25,6 @@ header {
     width: 100%;
     position: fixed;
     z-index: 1000;
-    top: 0;
     background-color: #2C2626;
 }
 .navbar-list {
@@ -34,8 +34,8 @@ header {
     justify-content: center;
     height: 50px;
     width: 100%;
-    margin-top: 0;
-    padding: 10px 0;
+   margin: 0;
+   padding: 0;
 }
 .navbar-list h2, .navbar-list li {
     margin-right: 20px;
