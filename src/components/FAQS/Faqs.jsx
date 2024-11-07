@@ -56,20 +56,41 @@ function FaqsPart () {
             <h1 className="faqs-section-three">Meal Plans</h1>
             <h2 className="faqs-section-three-subh1">What is Your Meal Plan like?</h2>
             <p className="faqs-section-three-ans1">My meal plan entails balanced diet nutrition. I tailor my meal plans to the nutritional requirement of each individual. I have a way of calculating the macros and micros based on the fitness goals. In addition, I offer guide on supplementation to optimize the exercise results. I can assure you that I am following the meal plan that I provide. However, each individual may have unique meal plan based on their fitness goals. There is a wide range of recipes that are relatively low effort and use affordable ingredients to save on time and money.</p>
-            <h2 className="faqs-section-three-subh1">What Kind of Diet Are In Your Meal Plan?</h2>
+            <h2 className="faqs-section-three-subh2">What Kind of Diet Are In Your Meal Plan?</h2>
             <p className="faqs-section-three-ans2">I take carnivorous diet since it there is significant evidence demonstrate the impact of consuming meat on muscle growth. I can still provide alternatives for other dietary plans.</p>
             <h2 className="faqs-section-three-subh3">Do You Provide A Grocery Shopping List?</h2>
             <p className="faqs-section-three-ans3">Yes, I provide monthly shopping options. I have a list of affordbale grocery stores. I prefer providing a monthly shoppoing list since it is cheaper in the long-run</p>
-            <h2 className="faqs-section-four-subh4">Do I Have To Follow A Strict Diet?</h2>
-            <p className="faqs-section-four-ans4">No, you do not have to maintain an overly strict diet. I offer the best recommendation to fuel your body and as long as you are making sensible nutritional choices, you should be able to see results. Nonetheless, use my meal plan as a guide for the best outcomes.</p>
-            <h2 className="faqs-section-five-subh5">What About Cheat Meals?</h2>
-            <p className="faqs-section-five-ans5">Cheat meals are optional provided you can teach your body not to overindulge and back to square one. I would be careful of cheat meals as a beginner since your body is just starting to undergo recomposition. Besides a beginner may easily overindulge in unhealthy foods compared to an experienced athlete. Therefore, be mindful of what you consume during the weekends as overindulgence affect your fitness journey.</p>
-            <h2 className="faqs-section-six-subh6">Suppose I Do Not Like the Recipe, Can I Introduce Some Recipes?</h2>
-            <p className="faqs-section-six-ans6">You are always allowed to try out new recipes that match your taste buds. It would be prudent to share them with me at least every week so that I can check to see whether they align with your fitness goals. I can also recommend some alternatives.</p>
-            <h2 className="faqs-section-seven-subh7">I Have Family, Do They Have To Follow The Same Meal Plan?</h2>
-            <p className="faqs-section-eight-ans7">Yes. My meal plans are not strictly meant for those who workout. You can adjust the ingredients so that your family members can enjoy the food and remain healthy</p>
-            <h2 className="faqs-section-nine-subh9">Do I Have To Count The Calories Too?</h2>
-            <p className="faqs-section-nine-ans9">I will calculate the daily calorie intake based on your fitness goals. You do not have to maintain your diet strictly within the set calorie goal. I will provide a range that even offer advice so that you do not have to weigh your food all the time!</p>
+            <h2 className="faqs-section-three-subh4">Do I Have To Follow A Strict Diet?</h2>
+            <p className="faqs-section-three-ans4">No, you do not have to maintain an overly strict diet. I offer the best recommendation to fuel your body and as long as you are making sensible nutritional choices, you should be able to see results. Nonetheless, use my meal plan as a guide for the best outcomes.</p>
+            <h2 className="faqs-section-three-subh5">What About Cheat Meals?</h2>
+            <p className="faqs-section-three-ans5">Cheat meals are optional provided you can teach your body not to overindulge and back to square one. I would be careful of cheat meals as a beginner since your body is just starting to undergo recomposition. Besides a beginner may easily overindulge in unhealthy foods compared to an experienced athlete. Therefore, be mindful of what you consume during the weekends as overindulgence affect your fitness journey.</p>
+            <h2 className="faqs-section-three-subh6">Suppose I Do Not Like the Recipe, Can I Introduce Some Recipes?</h2>
+            <p className="faqs-section-three-ans6">You are always allowed to try out new recipes that match your taste buds. It would be prudent to share them with me at least every week so that I can check to see whether they align with your fitness goals. I can also recommend some alternatives.</p>
+            <h2 className="faqs-section-three-subh7">I Have Family, Do They Have To Follow The Same Meal Plan?</h2>
+            <p className="faqs-section-three-ans7">Yes. My meal plans are not strictly meant for those who workout. You can adjust the ingredients so that your family members can enjoy the food and remain healthy</p>
+            <h2 className="faqs-section-three-subh8">Do I Have To Count The Calories Too?</h2>
+            <p className="faqs-section-three-ans8">I will calculate the daily calorie intake based on your fitness goals. You do not have to maintain your diet strictly within the set calorie goal. I will provide a range that even offer advice so that you do not have to weigh your food all the time!</p>
+            <h1 className="faqs-section-four">Payment and Subscription</h1>
+            <h2 className="faqs-section-four-subh1">Will I Keep Being Charged Every Month?</h2>
+            <p className="faqs-section-four-ans1">Yes. My program is based on a monthly subscription that renews every month. You can always cancel your subscription at any time without any charges.</p>
+            <h2 className="faqs-section-four-subh2">How Do I Cancel My Subscription?</h2>
+            <p className="faqs-section-four-ans2">You may cancel your subscription at any time with no additional fees. Simply log in to your dashboard and head to 'Settings" section. You will then see the 'Cancel Subscription' button. After you cancel your subscription, you will stil have access to your account until the end of your subscription period.</p>
+            <h2 className="faqs-section-four-subh3">How Much Is The subscription?</h2>
+            <p className="faqs-section-four-ans3">My program is Ksh. 5000 or $40 per month. It automatically renews every month, but you can cancel at any time.</p>
+            <h2 className="faqs-section-four-subh5">I Am Having Trouble Making Payment</h2>
+            <p className="faqs-section-four-ans5">If you encounter problems with your payment method, please consider the following reasons:</p>
+            <ul className="payment-list">
+                <li>Do you have enough funds in your chosen bank account?</li>
+                <li>Did your the correct card information?</li>
+                <li>Has your card expired?</li>
+            </ul>
+            <p className="faqs-section-four-ans5a">If you still have problems, email us at adindajohnrodgers@gamil.com</p>
+            <h1 className="faqs-section-five">Technical Issues</h1>
+            <h2 className="faqs-section-five-subh5">I Forgot My Password. What Should I Do?</h2>
+            <p className="faqs-section-five-ans1">If you forgot your password, click on the 'Forgot Your Password' link on the login page and you will receive an email with a link to rset. Follow the instructions to set your new password and try logging back again.</p>
+            <h1 className="faqs-section-six">Contact</h1>
+            <h2 className="faqs-section-six-subh1">How Do I Contact If I Want To Enroll For Your Program or If I Need Any Help?</h2>
+            <p className="faqs-section-six-ans">I am happy to assist you at any time of the day. Please send me an email at adindajohnrodgers@gmail.com.</p>
         </div>
     )
 }
