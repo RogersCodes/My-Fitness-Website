@@ -12,13 +12,13 @@ function FaqsPart () {
                 <p className="faqs-answer-one-part-two">The goal of my workout program is to challenge you constantly and change the way you approach working out.</p>
                 <h2 className="faqs-subheading-two">How Do I Access the Workouts?</h2>
                 <p className="faqs-second-answer">My workouts and meal plans are available on my site. You will need to login or register if you are a new user to access the each day's workout.</p>
-                <h2 className="faqs-subheading-three">Is There an App for the Program</h2>
+                <h2 className="faqs-subheading-three">Is There an App for the Program?</h2>
                 <p className="faqs-third-answer">No. Currently, there is no app, but I am working on it</p>
                 <h2 className="faqs-subheading-three">Can I Perform These Workouts From Home?</h2>
                 <p className="faqs-answer-three">Yes! My program is designed for gym-goers and those working out from home. You can perform these workouts from home, during your vacation, or when travelling. I have multiple options that will push you to work as hard as if you were in the gym.</p>
                 <h2 className="faqs-subheading-four">How Long Are The Workouts?</h2>
                 <p className="faqs-answer-four">A typical workout is 60 minutes. However, there are options for 30-minute workouts depending on your schedule</p>
-                <h2 className="faqs-subheading-five">How Will I Perform the Workouts</h2>
+                <h2 className="faqs-subheading-five">How Will I Perform the Workouts?</h2>
                 <p className="faqs-answer-five">Each day you can workout either at home or at the gym. I will provide short videos to desscribe how you can perform the exercises. You can review the videos at the gym or at home. In case you experience any discomfort, reach out to me via email or my phone number, and I will respond promptly.</p>
                 <h2 className="faqs-subheading-six">What Equipmeny Do I Need?</h2>
                 <p className="faqs-answer-six">The type of equipment depends on where you prefer to perform you workout.</p>
@@ -90,7 +90,7 @@ function FaqsPart () {
                 <h2 className="faqs-section-five-subh5">I Forgot My Password. What Should I Do?</h2>
                 <p className="faqs-section-five-ans1">If you forgot your password, click on the 'Forgot Your Password' link on the login page and you will receive an email with a link to rset. Follow the instructions to set your new password and try logging back again.</p>
                 <h1 className="faqs-section-six">Contact</h1>
-                <h2 className="faqs-section-six-subh1">How Do I Contact If I Want To Enroll For Your Program or If I Need Any Help?</h2>
+                <h2 className="faqs-section-six-subh1">Who Do I Contact If I Want To Enroll In Your Program or If I Need Any Help?</h2>
                 <p className="faqs-section-six-ans">I am happy to assist you at any time of the day. Please send me an email at adindajohnrodgers@gmail.com.</p>
         </div>
         </main>
