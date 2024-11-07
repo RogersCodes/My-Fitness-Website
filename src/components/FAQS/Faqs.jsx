@@ -84,7 +84,7 @@ function FaqsPart () {
                 <li>Did your the correct card information?</li>
                 <li>Has your card expired?</li>
             </ul>
-            <p className="faqs-section-four-ans5a">If you still have problems, email us at adindajohnrodgers@gamil.com</p>
+            <p className="faqs-section-four-ans5a">If you still have problems, email us at adindajohnrodgers@gmail.com</p>
             <h1 className="faqs-section-five">Technical Issues</h1>
             <h2 className="faqs-section-five-subh5">I Forgot My Password. What Should I Do?</h2>
             <p className="faqs-section-five-ans1">If you forgot your password, click on the 'Forgot Your Password' link on the login page and you will receive an email with a link to rset. Follow the instructions to set your new password and try logging back again.</p>

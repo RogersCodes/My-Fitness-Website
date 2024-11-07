@@ -18,6 +18,7 @@
 }
 .navbar-list .active {
     border-bottom: 4px solid #dbcbcb;
+    color: white;
 }
 header {
     width: 100%;
