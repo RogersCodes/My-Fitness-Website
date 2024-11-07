@@ -4,7 +4,19 @@
     font-style: normal;
     width: 100%;
 }
-.navbar a.active {
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    height: 80px;
+}
+.header-title {
+    white-space: nowrap;
+    font-size: 40px;
+}
+.navbar-list .active {
     border-bottom: 4px solid #dbcbcb;
 }
 header {
@@ -14,7 +26,7 @@ header {
     top: 0;
     background-color: #2C2626;
 }
-ul {
+.navbar-list {
     list-style: none;
     display: flex;
     align-items: center;
@@ -24,10 +36,10 @@ ul {
     margin-top: 0;
     padding: 10px 0;
 }
-ul h2, ul li {
+.navbar-list h2, .navbar-list li {
     margin-right: 20px;
 }
-ul li a, ul li button {
+.navbar-list li a, .navbar-list li button {
     text-decoration: none;
     padding: 10px 15px;
 }
@@ -49,13 +61,24 @@ ul li a, ul li button {
     color: #7E686A;
     font-size: 30px;
 }
-ul li a {
+.navbar-list li a {
     color: #847575;
+    transition: color 0.3s ease;
 }
-a:hover {
+.navbar-list li a:hover {
     text-decoration: underline;
     color: #FFFFFF;
 }
+.navbar-list li .login-button,
+.navbar-list li .signup-button {
+    text-decoration: none;
+}
+
+.navbar-list li .login-button:hover,
+.navbar-list li .signup-button:hover {
+    text-decoration: none;
+}
+
 .signup-button {
     background-color: #847575;
     color: #000000;
@@ -67,14 +90,5 @@ a:hover {
 .signup-button:hover {
     background-color:#5B4848;
     color: #FFFFFF;
-}
-.navbar a,
-.navbar button {
-    text-decoration: none;
-}
-
-.navbar a:hover,
-.navbar button:hover {
-    text-decoration: none;
 }
 
