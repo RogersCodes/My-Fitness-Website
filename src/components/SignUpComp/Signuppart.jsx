@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function SignUp () {
     return (
@@ -7,10 +6,10 @@ function SignUp () {
             <h1 className="train-with-me">Train With Me, Rogers</h1>
             <h3 className="create-account">Create An Account</h3>
             <form className="signup-form">
-                <label htmlFor="first-name">Your Name</label>
+                <label htmlFor="first-name">First Name</label>
                 <input type="text" id="first-name" placeholder="First Name" className="first-name" required></input>
                 
-                <label htmlFor="last-name"></label>
+                <label htmlFor="last-name">Last Name</label>
                 <input type="text" id="last-name" placeholder="Last Name" className="last-name" required></input>
                 
                 <label htmlFor="your-email">Your Email</label>
@@ -25,7 +24,7 @@ function SignUp () {
                 <button type="submit" className="new-account" aria-label="Continue to create a new account">Continue</button>
                 
                 <p className="signup-policy">By continuing, you are indicating that you accept our <a href="/terms" className="terms-of-service">Terms of Service</a> and <a href="/privacy" className="privacy-policy">Privacy Policy</a>, and consent to receiving emails from rogersfitnessclub.com.</p>
-                <Link to="/login" type="button" className="login-button">Already a Member? Log In</Link>
+                <button type="button" className="login-button">Already a Member? Log In</button>
             </form>
         </div>
     )
