@@ -5,6 +5,7 @@ import NoPage from '../pages/NoPage';
 import NutritionPage from '../pages/NutritionPage';
 import Faqs from '../pages/FAQS';
 import Blog from '../pages/Blog';
+import SignUpPage from '../pages/SignUpPage';
 
 const ROUTES = [
     {
@@ -31,6 +32,10 @@ const ROUTES = [
     {
       path: '/blog',
       element: <Blog />
+    },
+    {
+      path: '/signup',
+      element: <SignUpPage />
     }
   ];
   

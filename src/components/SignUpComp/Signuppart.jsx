@@ -29,7 +29,7 @@ function SignUp () {
                 <button type="submit" className="new-account" aria-label="Continue to create a new account">Continue</button>
                 
                 <p className="signup-policy">By continuing, you are indicating that you accept our <a href="/terms" className="terms-of-service">Terms of Service</a> and <a href="/privacy" className="privacy-policy">Privacy Policy</a>, and consent to receiving emails from rogersfitnessclub.com.</p>
-                <button type="button" className="login-button" onClick={handleLoginRedirect}>Already a Member? Log In</button>
+                <button type="button" className="signin-button" onClick={handleLoginRedirect}>Already a Member? Log In</button>
             </form>
         </div>
     )
