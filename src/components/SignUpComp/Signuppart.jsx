@@ -9,7 +9,23 @@ function SignUp () {
         confirmEmail: "",
         password: "",
     });
+    const [error, setError] = useState("");
     const navigate = useNavigate();
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({...prevData, [name]: value}));
+    };
+
+    const handleValidation = () => {
+        if (formData.email !== formData.confirmEmail) {
+            setError("Emails do not match!");
+            return false;
+        }
+        setError("");
+        return true;
+    };
+   
 
     const handleLoginRedirect = () => {
         navigate("/login");
@@ -20,20 +36,21 @@ function SignUp () {
             <h3 className="create-account">Create An Account</h3>
             <form className="signup-form">
                 <label htmlFor="first-name">First Name</label>
-                <input type="text" id="first-name" placeholder="First Name" className="first-name" value={formData.firstName} required></input>
+                <input type="text" id="first-name" placeholder="First Name" className="first-name" value={formData.firstName} onChange={handleInputChange} required></input>
                 
                 <label htmlFor="last-name">Last Name</label>
-                <input type="text" id="last-name" placeholder="Last Name" className="last-name" value={formData.lastName} required></input>
+                <input type="text" id="last-name" placeholder="Last Name" className="last-name" value={formData.lastName} onChange={handleInputChange} required></input>
                 
                 <label htmlFor="your-email">Your Email</label>
-                <input type="email" id="your-email" placeholder="email@address.com" className="your-email" value={formData.email} required></input>
+                <input type="email" id="your-email" placeholder="email@address.com" className="your-email" value={formData.email} onChange={handleInputChange} required></input>
                 
                 <label htmlFor="confirm-email">Confirm Email</label>
-                <input type="email" id="confirm-email" placeholder="Confirm Email" className="confirm-email" value={formData.confirmEmail} required></input>
+                <input type="email" id="confirm-email" placeholder="Confirm Email" className="confirm-email" value={formData.confirmEmail} onChange={handleInputChange} required></input>
                 
                 <label htmlFor="password">Your Password</label>
-                <input type="password" id="password" className="password" placeholder="Enter Your Password" aria-label="Password" value={formData.password}></input>
+                <input type="password" id="password" className="password" placeholder="Enter Your Password" aria-label="Password" value={formData.password} onChange={handleInputChange}></input>
                 
+                {error && <p className="error-message">{error}</p>}
                 <button type="submit" className="new-account" aria-label="Continue to create a new account">Continue</button>
                 
                 <p className="signup-policy">By continuing, you are indicating that you accept our <a href="/terms" className="terms-of-service">Terms of Service</a> and <a href="/privacy" className="privacy-policy">Privacy Policy</a>, and consent to receiving emails from rogersfitnessclub.com.</p>
