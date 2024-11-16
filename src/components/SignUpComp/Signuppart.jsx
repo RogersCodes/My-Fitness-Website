@@ -25,7 +25,13 @@ function SignUp () {
         setError("");
         return true;
     };
-   
+   //form submission
+   const handleSubmit = (e) => {
+    e.preventDefault();
+    if (handleValidation()) {
+        console.log("Form Submitted:", formData)
+    }
+   }
 
     const handleLoginRedirect = () => {
         navigate("/login");
@@ -34,21 +40,21 @@ function SignUp () {
         <div className="signup">
             <h1 className="train-with-me">Train With Me, Rogers</h1>
             <h3 className="create-account">Create An Account</h3>
-            <form className="signup-form">
+            <form className="signup-form" onSubmit={handleSubmit}>
                 <label htmlFor="first-name">First Name</label>
-                <input type="text" id="first-name" placeholder="First Name" className="first-name" value={formData.firstName} onChange={handleInputChange} required></input>
+                <input type="text" id="first-name" placeholder="First Name" className="first-name" name="firstName" value={formData.firstName} onChange={handleInputChange} required></input>
                 
                 <label htmlFor="last-name">Last Name</label>
-                <input type="text" id="last-name" placeholder="Last Name" className="last-name" value={formData.lastName} onChange={handleInputChange} required></input>
+                <input type="text" id="last-name" placeholder="Last Name" className="last-name" name="lastName" value={formData.lastName} onChange={handleInputChange} required></input>
                 
                 <label htmlFor="your-email">Your Email</label>
-                <input type="email" id="your-email" placeholder="email@address.com" className="your-email" value={formData.email} onChange={handleInputChange} required></input>
+                <input type="email" id="your-email" placeholder="email@address.com" className="your-email" name="email" value={formData.email} onChange={handleInputChange} required></input>
                 
                 <label htmlFor="confirm-email">Confirm Email</label>
-                <input type="email" id="confirm-email" placeholder="Confirm Email" className="confirm-email" value={formData.confirmEmail} onChange={handleInputChange} required></input>
+                <input type="email" id="confirm-email" placeholder="Confirm Email" className="confirm-email" name="confirmEmail" value={formData.confirmEmail} onChange={handleInputChange} required></input>
                 
                 <label htmlFor="password">Your Password</label>
-                <input type="password" id="password" className="password" placeholder="Enter Your Password" aria-label="Password" value={formData.password} onChange={handleInputChange}></input>
+                <input type="password" id="password" className="password" placeholder="Enter Your Password" aria-label="Password" name="password" value={formData.password} onChange={handleInputChange}></input>
                 
                 {error && <p className="error-message">{error}</p>}
                 <button type="submit" className="new-account" aria-label="Continue to create a new account">Continue</button>
