@@ -29,7 +29,8 @@ function SignUp () {
    const handleSubmit = (e) => {
     e.preventDefault();
     if (handleValidation()) {
-        console.log("Form Submitted:", formData)
+        console.log("Form Submitted:", formData);
+        //API Call?
     }
    }
 
