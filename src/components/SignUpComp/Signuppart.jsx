@@ -1,6 +1,14 @@
 import React from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function SignUp () {
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        confirmEmail: "",
+        password: "",
+    });
     const navigate = useNavigate();
 
     const handleLoginRedirect = () => {
@@ -12,19 +20,19 @@ function SignUp () {
             <h3 className="create-account">Create An Account</h3>
             <form className="signup-form">
                 <label htmlFor="first-name">First Name</label>
-                <input type="text" id="first-name" placeholder="First Name" className="first-name" required></input>
+                <input type="text" id="first-name" placeholder="First Name" className="first-name" value={formData.firstName} required></input>
                 
                 <label htmlFor="last-name">Last Name</label>
-                <input type="text" id="last-name" placeholder="Last Name" className="last-name" required></input>
+                <input type="text" id="last-name" placeholder="Last Name" className="last-name" value={formData.lastName} required></input>
                 
                 <label htmlFor="your-email">Your Email</label>
-                <input type="email" id="your-email" placeholder="email@address.com" className="your-email" required></input>
+                <input type="email" id="your-email" placeholder="email@address.com" className="your-email" value={formData.email} required></input>
                 
                 <label htmlFor="confirm-email">Confirm Email</label>
-                <input type="email" id="confirm-email" placeholder="Confirm Email" className="confirm-email" required></input>
+                <input type="email" id="confirm-email" placeholder="Confirm Email" className="confirm-email" value={formData.confirmEmail} required></input>
                 
                 <label htmlFor="password">Your Password</label>
-                <input type="password" id="password" className="password" placeholder="Enter Your Password" aria-label="Password"></input>
+                <input type="password" id="password" className="password" placeholder="Enter Your Password" aria-label="Password" value={formData.password}></input>
                 
                 <button type="submit" className="new-account" aria-label="Continue to create a new account">Continue</button>
                 
