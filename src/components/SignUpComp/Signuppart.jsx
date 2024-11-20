@@ -31,8 +31,16 @@ function SignUp () {
     if (handleValidation()) {
         console.log("Form Submitted:", formData);
         //API Call?
+        //Reset Form After clients Submit
+        setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            confirmEmail: "",
+            password: "",
+        });
     }
-   }
+   };
 
     const handleLoginRedirect = () => {
         navigate("/login");
