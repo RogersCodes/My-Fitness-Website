@@ -63,7 +63,7 @@ function SignUp () {
                 <input type="email" id="confirm-email" placeholder="Confirm Email" className="confirm-email" name="confirmEmail" value={formData.confirmEmail} onChange={handleInputChange} required></input>
                 
                 <label htmlFor="password">Your Password</label>
-                <input type="password" id="password" className="password" placeholder="Enter Your Password" aria-label="Password" name="password" value={formData.password} onChange={handleInputChange}></input>
+                <input type="password" id="password" className="password" placeholder="Enter Your Password" aria-label="Password" name="password" value={formData.password} onChange={handleInputChange} required></input>
                 
                 {error && <p className="error-message">{error}</p>}
                 <button type="submit" className="new-account" aria-label="Continue to create a new account">Continue</button>
