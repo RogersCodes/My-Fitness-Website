@@ -6,6 +6,7 @@ import NutritionPage from '../pages/NutritionPage';
 import Faqs from '../pages/FAQS';
 import Blog from '../pages/Blog';
 import SignUpPage from '../pages/SignUpPage';
+import LoginPage from '../pages/LoginPage';
 
 const ROUTES = [
     {
@@ -36,6 +37,10 @@ const ROUTES = [
     {
       path: '/signup',
       element: <SignUpPage />
+    },
+    {
+      path: '/login',
+      element: <LoginPage />
     }
   ];
   
