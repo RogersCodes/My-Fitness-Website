@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login () {
+    const navigateLogin = useNavigate();
+    const handleSignUpRedirect = () => {
+        navigateLogin("/signup");
+    }
     return (
         <div className="login-page">
             <h2 className="login-header">Log In</h2>
@@ -16,7 +21,7 @@ function Login () {
 
                 <button type="button" className="reset-password">Reset Your Password</button>
 
-                <button type="button" className="join-now-button">Not A Member? Join Now!</button>
+                <button type="button" className="join-now-button" onClick={handleSignUpRedirect}>Not A Member? Join Now!</button>
             </form>
         </div>
     )
