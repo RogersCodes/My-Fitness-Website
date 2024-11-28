@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Login () {
+    const [ inputData, setInputData ] = useState({
+        loginEmail: "",
+        loginPassword: "",
+
+    });
     const navigateLogin = useNavigate();
     const handleSignUpRedirect = () => {
         navigateLogin("/signup");
