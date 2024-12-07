@@ -54,6 +54,20 @@ const BlogSection = () => {
                     image={featuredBlog.image}
                 />
             </div>
+            {/* Main Blog Sections*/}
+            <div className="blogs"></div>
+            <h2 className="blog-lists">Explore Blogs</h2>
+            <div className="blog-categories">
+                {blogs.map((blog, index) => (
+                    <BlogCard
+                        key={index}
+                        title={blog.title}
+                        content={blog.content}
+                        category={blog.category}
+                        image={blog.image}
+                    />
+                ))}
+            </div>
         </div>
     )
 }
