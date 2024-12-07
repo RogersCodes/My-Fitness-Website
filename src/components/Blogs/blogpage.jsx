@@ -15,7 +15,7 @@ const BlogCard = ({ title, content, category, image }) => {
 };
 //Blog section components
 const BlogSection = () => {
-    const [featuredBllog, setFeaturedBlog] = useState({
+    const [featuredBlog, setFeaturedBlog] = useState({
         title: "Top 5 Tips to Maintain Your Physique During Holiday Season",
         content: "As the festive season begins, there is so much pressure to take the tasy foods while avoiding weight gain or losing the muscles throughout the year. Here are some tips for this festive season that will help you maintain your body while enjoying the tasy meals and quality time with your friends and family...",
         category: "Tips",
@@ -47,6 +47,12 @@ const BlogSection = () => {
             {/*Featured Blog*/}
             <div className="featured-blog">
                 <h2 className="featured-blog-heading">Featured Blog</h2>
+                <BlogCard 
+                    title={featuredBlog.title}
+                    content={featuredBlog.content}
+                    category={featuredBlog.category}
+                    image={featuredBlog.image}
+                />
             </div>
         </div>
     )
