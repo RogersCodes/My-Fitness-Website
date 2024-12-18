@@ -1,0 +1,483 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+ /* Workouts page 1st section styling*/
+.workouts-section-one {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    position: relative;
+    height: 100vh;
+    background-color: rgba(96, 84, 84, 0.8); 
+    overflow: hidden; 
+}
+.workouts-section-one-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    margin-top: 90px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+}
+.cable-row {
+    width: 50%;
+    object-position: right;
+    height: 100vh;
+    order: 2;
+    object-fit: cover;
+}
+.workouts-heading {
+    font-size: 40px;
+    color: #e09c9c ;
+}
+.workouts-part-of-team {
+    font-family: "Times New Roman", Times, serif;
+}
+.workouts-button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    background-color: #c7c6d0;
+    color: #281515;
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    padding: 10px;
+    margin: 20px;
+}
+.workouts-button:hover {
+    background-color: #958282;
+    color: rgb(209, 228, 228);
+    transform: scale(1.1);
+}
+/* Workouts page 1st section styling*/
+
+/*Workouts page 2nd section styling*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.workouts-section-two {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(76, 67, 67, 0.8); 
+    overflow: hidden;
+}
+.workouts-section-two-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    margin-top: 90px;
+}
+.workouts-results {
+    width: 50%;
+    object-position: right;
+    height: 100vh;
+    order: 2;
+    object-fit: cover;
+}
+.workouts-section-two-text-header {
+    font-size: 40px;
+    color: rgb(238, 201, 177);
+}
+.workouts-section-two-button {
+    margin: 50px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    transition: background-color 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    background-color: rgb(200, 231, 231);
+    color: rgb(21, 5, 5);
+}
+.workouts-section-two-button:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}
+/*Workouts-section-three styling*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.workouts-section-three {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    position: relative;
+    height: 100vh;
+    background-color: rgba(164, 150, 150, 0.8); 
+    overflow: hidden; 
+}
+.workouts-section-three-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    margin-top: 90px;
+}
+.workouts-section-three-img {
+    width: 50%;
+    object-position: right;
+    height: 100vh;
+    order: 2;
+    object-fit: cover;
+}
+.workouts-section-three-header {
+    font-size: 40px;
+    color: rgb(93, 79, 50);
+}
+.workouts-section-three-join {
+    font-family:  "Times New Roman", Times, serif;
+}
+.workouts-section-three-button {
+    margin: 30px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    transition: background-color 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    background-color: rgb(41, 46, 46);
+    color: rgb(212, 203, 203);
+}
+.workouts-section-three-button:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}
+/*Workouts-section-three styling*/
+
+/*Workouts-section-four styling*/
+.workouts-section-four-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    font-size: 40px;
+    color:rgba(82, 67, 67, 0.71)
+}
+.workouts-section-four-para {
+    text-align: center;
+    font-family:  "Times New Roman", Times, serif;
+    font-style: normal;
+    font-size: 18px;
+}
+.workouts-section-four-action {
+    text-align: center;
+    font-size: 18px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+}
+.highlight-section-four {
+    color:#cf3434;
+}
+.workouts-section-four-action-news {
+    text-align: center;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+}
+.workouts-section-four-table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 70%;
+    border: 1px solid #463d3d;
+}
+.workouts-section-four-table td::before {
+    content: "•";
+    margin-right: 8px;
+    font-weight: bold; 
+}
+.workouts-section-four-table td {
+    font-family:  "Times New Roman", Times, serif;
+    font-size: 18px;
+}
+.workouts-section-four-table, td, th {
+    text-align: left;
+    border: 1px solid #463d3d;
+    padding: 8px 80px;
+}
+.workouts-section-four-table th {
+    padding: 20px 80px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+}
+.table-caption {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+}
+.workouts-section-four {
+    background-color: #c9c8d2;
+    overflow: hidden;
+}
+/*Workouts-section-four styling*/
+
+/*Nutrition-section-one styling*/
+.nutrition-section-one {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(164, 150, 150, 0.8); 
+    overflow: hidden;
+    
+}
+.nutrition-section-one-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    padding: 30px;
+}
+.fish {
+    width: 50%;
+    object-position: right;
+    order: 2;
+    object-fit: cover;
+    height: 100%;
+   
+}
+.nutrition-one-header {
+    text-align: center;
+    font-size: 40px;
+    color: #584646;
+    margin-bottom: 10px
+}
+.nutrition-section-one-join {
+    font-family:  "Times New Roman", Times, serif;
+    font-size: 18px;
+}
+.nutrition-section-one-button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    background-color: #968075;
+    color: #edd3d3;
+    transition: transform 0.3s ease;
+    font-size: 20px;
+    margin: auto;
+    padding: 5px;
+}
+.nutrition-section-one-button:hover {
+    transform: scale(1.1);
+    color:#c7c6d0;
+}
+.nutrition-section-one-para, .nutrition-section-one-second {
+   padding: 10px;
+}
+/*Nutrition-section-one styling*/
+
+/*Nutrition-section-two styling*/
+.nutrition-section-two {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #968b8a;
+}
+.nutrition-three-food {
+    width: 50%;
+    object-position: right;
+    order: 2;
+    object-fit: cover;;
+}
+.nutrition-section-two-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    margin: 30px;;
+    padding: 20px;
+}
+.nutrition-section-two-header {
+    text-align: center;
+    font-size: 40px;
+    color: #514747;
+    margin-top: 20px;
+}
+.nutrition-section-two-button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    color:#524c4c;
+    background-color: #eee2e2;
+}
+.nutrition-section-two-button:hover {
+    background-color: #d8c6c6;
+    color: #3d3a3a;
+    opacity: 1;
+}
+/*Nutrition-section-two-styling*/
+
+/*Nutrition-section-three styling*/
+.nutrition-section-three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #d6c7be;
+}
+.nutrition-section-three-text {
+    padding: 40px;
+    margin: auto;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    text-align: center;
+    width: 60%;
+}
+.nutrition-section-three-header {
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    color: #352b2b;
+}
+.nutrition-section-three-button {
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    padding: 10px;
+    margin: auto;
+    color: #514747;
+    background-color: #e7e0e0;
+}
+.nutrition-section-three-button:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);   
+}
+.nutrition-section-three-call-to-act {
+    font-size: 16px;
+    font-family:  "Times New Roman", Times, serif;
+}
+/*Nutrition-section-four styling*/
+.nutrition-section-four {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #aaa9a9;
+}
+.nutrition-four-meal {
+    width: 50%;
+    object-fit: cover;
+    object-position: right;
+    order: 2;
+}
+.nutrition-section-four-text {
+    width: 50%;
+    padding: 30px;
+    margin: 20px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nutrition-section-four-header {
+    font-size: 40px;
+    margin-top: 10px;
+    color: #403e3e;
+}
+/*FAQS Page Styling */
+main {
+    background-color: #f6eaea;
+}
+.faqs-header {
+    margin-top: 130px;
+  }
+.faqs {
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    width: 60%;
+    margin-left: 180px;
+    padding: 10px;
+}
+/* error page styling */
+.error-page {
+    background-color: #ffffff ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.error-header {
+    margin-top: 200px;
+    font-family: "Aoboshi One", serif;
+    font-weight: bold;
+    font-size: 80px;
+}
+.home-link {
+    color: #504cb3;
+    font-size: 30px;
+}
+.home-link:hover {
+    cursor: pointer;
+    transition-duration: 0.3s;
+    color: #847575;
+}
+/* error page styling */
