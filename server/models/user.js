@@ -51,3 +51,13 @@ userSchema.pre('save', async function (next) {
         next(error);
     }
 });
+
+//compare entered password with the hashed one
+userSchema.methods.maatchPassword = async function (enteredPassword) {
+    return await bcrypt.compare(enteredPassword, this.password);
+};
+
+//Create user model based on the schema
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
