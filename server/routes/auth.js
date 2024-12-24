@@ -4,7 +4,7 @@ const router = express.Router();
 
 //Register new user
 
-router.post('signup', async (req, res) => {
+router.post('/signup', async (req, res) => {
     const { name, email, confirmEmail, password } = req.body;
     //Check if user has provided everry entry
     if (!name || !email || !confirmEmail || !password) {
@@ -22,7 +22,7 @@ router.post('signup', async (req, res) => {
             return res.status(400).json({ message: 'Email already in use' });
         }
         //Create a new user
-    const user = new User({ name, email, confirmEmail, password });
+    const user = new User({ name, email, password });
     //Save user to DB
     await user.save();
 
