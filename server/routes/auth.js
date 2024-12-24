@@ -8,9 +8,9 @@ const router = express.Router();
 
 //Register new user
 router.post('/signup', async (req, res) => {
-    const { name, email, confirmEmail, password } = req.body;
+    const { firstName, lastName, email, confirmEmail, password } = req.body;
     //Check if user has provided everry entry
-    if (!name || !email || !confirmEmail || !password) {
+    if (!firstName || !lastName || !email || !confirmEmail || !password) {
         return res.status(400).json({ message: 'Please enter all fields' });
     }
     //Check if emails match
