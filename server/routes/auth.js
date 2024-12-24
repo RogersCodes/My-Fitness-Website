@@ -32,4 +32,12 @@ router.post('/signup', async (req, res) => {
         res.status(500).json({ message: 'Server error', error: error.message });
     }
 });
+
+//Login an existing user
+router.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+    if (!email || !password) {
+        return res.status(400).json({ message: 'Please provide email and password' });
+    }
+})
 module.exports = router;
