@@ -39,5 +39,17 @@ router.post('/login', async (req, res) => {
     if (!email || !password) {
         return res.status(400).json({ message: 'Please provide email and password' });
     }
+    try {
+        //Check if user exists
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(400).json({ message: 'Invalid email or password' });
+        }
+        //Check if the entered password matches the hashed password
+        const isMatch = await user.matchPassword(password);
+        if (!isMatch) {
+            return res.status(400).json({ message: 'Invalid email or password' });
+        }
+    }
 })
 module.exports = router;
