@@ -23,7 +23,7 @@ const userSchema = new Schema({
             message: 'Plase enter a valid email address',
         },
     },
-    confirmEmail: {
+    /*confirmEmail: {
         type: String,
         required: true,
         validate: {
@@ -32,7 +32,7 @@ const userSchema = new Schema({
             },
             message: 'Email addresses do not match',
         },
-    },
+    },*/
     password: {
         type: String,
         required: true,
