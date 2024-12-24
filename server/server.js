@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const authRoutes = require('./routes/auth');
 
 const app = express();
 
@@ -15,6 +16,10 @@ connectDB();
 
 //Routes
 app.get('/', (req, res) => res.send('Fitness API is running'));
+
+
+//Authentication routes
+app.use('/api/auth', authRoutes);
 
 //Start the server
 const PORT = process.env.PORT || 5000;
