@@ -3,9 +3,8 @@ const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const crypto = require('crypto');
-const secret = crypto.randomBytes(64).toString('hex');
-//console.log(secret);
+
+
 
 //Register new user
 router.post('/signup', async (req, res) => {
