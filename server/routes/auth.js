@@ -25,7 +25,7 @@ router.post('/signup', async (req, res) => {
             return res.status(400).json({ message: 'Email already in use' });
         }
         //Create a new user
-        const user = new User({ name, email, password });
+        const user = new User({ firstName, lastName, email, password });
         //Save user to DB
         await user.save();
 
@@ -65,7 +65,8 @@ router.post('/login', async (req, res) => {
             token,
             user: {
                 id: user._id,
-                name: user.name,
+                firstName: user.firstName,
+                lastName: user.lastName,
                 email: user.email,
             },
         });
