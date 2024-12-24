@@ -5,7 +5,12 @@ const { Schema } = mongoose;
 //The user schema
 
 const userSchema = new Schema({
-    name: {
+    firstName: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    lastName: {
         type: String,
         required: true,
         trim: true,
