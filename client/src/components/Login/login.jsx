@@ -8,6 +8,8 @@ function Login () {
         loginPassword: "",
 
     });
+    //logic for signup using the backend API
+    const loginUser = async (email, passwword) => {}
     const navigateLogin = useNavigate();
     const handleLoginChange = (e) => {
         const { name, value } = e.target;
