@@ -9,7 +9,19 @@ function Login () {
 
     });
     //logic for signup using the backend API
-    const loginUser = async (email, passwword) => {}
+    const loginUser = async (email, passwword) => {
+        try {
+            const response = await axios.post("http://localhost:8080/api/login", {
+                email: email,
+                password: passwword,
+            });
+            //Handle succesful login
+            console.log(response.data.token);
+        } catch (error) {
+            console.error('Login failed:', error.message.data.message);
+        }
+    };
+
     const navigateLogin = useNavigate();
     const handleLoginChange = (e) => {
         const { name, value } = e.target;
