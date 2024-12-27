@@ -7,6 +7,7 @@ import Faqs from '../pages/FAQS';
 import Blog from '../pages/Blog';
 import SignUpPage from '../pages/SignUpPage';
 import LoginPage from '../pages/LoginPage';
+import Dashboardw from '../pages/DashBoard';
 
 const ROUTES = [
     {
@@ -41,6 +42,10 @@ const ROUTES = [
     {
       path: '/login',
       element: <LoginPage />
+    },
+    {
+      path: '/dashboard',
+      element: <Dashboardw />
     }
   ];
   
