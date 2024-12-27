@@ -15,10 +15,12 @@ function Login () {
                 email: email,
                 password: passwword,
             });
-            //Handle succesful login
-            console.log(response.data.token);
+            //Store token from server-side
+            localStorage.setItem("token", response.data.token);
+            //Redirect clients workouts and meal plans page
+            navigateLogin('/dashboard')
         } catch (error) {
-            console.error('Login failed:', error.message.data.message);
+            console.error("Login failed:", error.message.data.message);
         }
     };
 
