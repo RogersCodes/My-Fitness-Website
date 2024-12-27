@@ -13,8 +13,11 @@ const Dashboard = () => {
             <section>
                 <h2 className="dashboard-workouts">Workouts</h2>
                 <ul className="workout-split-week">
-                    <li className="workout-list">Monday: Hamstrings and Glutes</li>
+                    <li className="workout-list">Monday: Hamstrings, Glutes, and Calves</li>
                     <li className="workout-list">Tuesday: Chest, Shoulders, and Triceps</li>
+                    <li className="workout-list">Wednesday: Back, Biceps, and Abs</li>
+                    <li className="workout-list">Thurday: Chest, Triceps, and Abs</li>
+                    <li className="workout-list">Friday: Quadriceps and Calves</li>
                 </ul>
             </section>
         </div>
