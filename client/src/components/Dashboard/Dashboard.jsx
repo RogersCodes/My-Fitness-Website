@@ -10,6 +10,13 @@ const Dashboard = () => {
     return (
         <div className="dashboard">
             <h1 className="dashboard-header">Welcome to Your Dashboard</h1>
+            <section>
+                <h2 className="dashboard-workouts">Workouts</h2>
+                <ul className="workout-split-week">
+                    <li className="workout-list">Monday: Hamstrings and Glutes</li>
+                    <li className="workout-list">Tuesday: Chest, Shoulders, and Triceps</li>
+                </ul>
+            </section>
         </div>
     )
 }
