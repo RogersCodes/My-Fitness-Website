@@ -6,7 +6,13 @@ const Dashboard = () => {
     //protect the page to allow only logged in users
     if (!token) {
         return <h2 className="dashboard-warning">Please log in to access this page.</h2>;
-    }
+    };
+    //logout option
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        window.location.href = '/';
+    };
+
     return (
         <div className="dashboard">
             <h1 className="dashboard-header">Welcome to Your Dashboard</h1>
@@ -20,6 +26,7 @@ const Dashboard = () => {
                     <li className="workout-list">Friday: Quadriceps and Calves</li>
                 </ul>
             </section>
+            <button className="logout-button" onClick={handleLogout}></button>
         </div>
     )
 }
