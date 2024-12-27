@@ -30,6 +30,16 @@ function Login () {
         const { name, value } = e.target;
         setInputData((prevData) => ({...prevData, [name]: value}));
     };
+    //When user fails to enter the correct details
+    const handleLoginClick = () => {
+        const { loginEmail, loginPassword } = inputData;
+        if (!loginEmail || !loginPassword) {
+            alert("Please fill in both email and password");
+            return;
+        }
+        loginUser(loginEmail, loginPassword);
+    };
+
     const handleSignUpRedirect = () => {
         navigateLogin("/signup");
     }
@@ -44,7 +54,7 @@ function Login () {
                 <label htmlFor="login-password"></label>
                 <input type="password" id="login-password" className="login-page-password" aria-label="loginPassword" placeholder="**********" name="loginPassword" value={inputData.loginPassword} onChange={handleLoginChange} required></input>
 
-                <button type="button" className="login-profile-button" aria-label="Proceed to your profile">Login</button>
+                <button type="button" className="login-profile-button" aria-label="Proceed to your profile" onClick={handleLoginClick}>Login</button>
 
                 <button type="button" className="reset-password">Reset Your Password</button>
 
