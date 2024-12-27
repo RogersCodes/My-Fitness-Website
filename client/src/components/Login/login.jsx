@@ -20,7 +20,8 @@ function Login () {
             //Redirect clients workouts and meal plans page
             navigateLogin('/dashboard')
         } catch (error) {
-            console.error("Login failed:", error.message.data.message);
+            console.error("Login failed:", error.response?.data?.message || error.message);
+            alert("Login failed. Please check your email and password.");
         }
     };
 
