@@ -8,6 +8,7 @@ import Blog from '../pages/Blog';
 import SignUpPage from '../pages/SignUpPage';
 import LoginPage from '../pages/LoginPage';
 import Dashboardw from '../pages/DashBoard';
+import ProtectedRoute from '../components/Dashboard/DashboardProtectedroute';
 
 const ROUTES = [
     {
@@ -46,6 +47,10 @@ const ROUTES = [
     {
       path: '/dashboard',
       element: <Dashboardw />
+    },
+    {
+      path: '/dashboard',
+      element: <ProtectedRoute />
     }
   ];
   
