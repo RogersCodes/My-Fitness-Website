@@ -43,12 +43,12 @@ function SignUp () {
     e.preventDefault();
     if (handleValidation()) {
         await signupUser({
-            firstName: firstName,
-                lastName: lastName,
-                email: email,
-                confirmEmail: confirmEmail,
-                password: password,
+                firstName: formData.firstName,
+                lastName: formData.lastName,
+                email: formData.email,
+                password: formData.password,
         });
+        //Reset form after signup
         setFormData({
             firstName: "",
             lastName: "",
