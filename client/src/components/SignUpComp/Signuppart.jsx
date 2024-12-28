@@ -14,15 +14,9 @@ function SignUp () {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    const signupUser = async (firstName, lastName, email, confirmEmail, password) => {
+    const signupUser = async (data) => {
         try {
-            const response = await axios.post("http://localhost:8080/api/signup", {
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                confirmEmail: confirmEmail,
-                password: password,
-            });
+            const response = await axios.post("http://localhost:8080/api/signup", data);
             localStorage.setItem("token", response.data.token);
             navigate('/dashboard');
         } catch (error) {
@@ -45,12 +39,16 @@ function SignUp () {
         return true;
     };
    //form submission
-   const handleSubmit = (e) => {
+   const handleSubmit = async (e) => {
     e.preventDefault();
     if (handleValidation()) {
-        console.log("Form Submitted:", formData);
-        //API Call?
-        //Reset Form After clients Submit
+        await signupUser({
+            firstName: firstName,
+                lastName: lastName,
+                email: email,
+                confirmEmail: confirmEmail,
+                password: password,
+        });
         setFormData({
             firstName: "",
             lastName: "",
