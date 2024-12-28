@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+
 function SignUp () {
     const [formData, setFormData] = useState({
         firstName: "",
@@ -12,6 +13,8 @@ function SignUp () {
     });
     const [error, setError] = useState("");
     const navigate = useNavigate();
+
+    const signupUser = async (firstName, lastName, email, confirmEmail, password) => {}
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
