@@ -23,6 +23,8 @@ function SignUp () {
                 confirmEmail: confirmEmail,
                 password: password,
             });
+            localStorage.setItem("token", response.data.token);
+            navigate('/dashboard');
         }
     }
 

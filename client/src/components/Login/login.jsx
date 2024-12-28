@@ -9,6 +9,7 @@ function Login () {
 
     });
     //logic for signup using the backend API
+    const navigateLogin = useNavigate();
     const loginUser = async (email, passwword) => {
         try {
             const response = await axios.post("http://localhost:8080/api/login", {
@@ -25,7 +26,7 @@ function Login () {
         }
     };
 
-    const navigateLogin = useNavigate();
+    
     const handleLoginChange = (e) => {
         const { name, value } = e.target;
         setInputData((prevData) => ({...prevData, [name]: value}));
