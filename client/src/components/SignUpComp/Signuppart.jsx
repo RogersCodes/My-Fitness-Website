@@ -14,7 +14,17 @@ function SignUp () {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    const signupUser = async (firstName, lastName, email, confirmEmail, password) => {}
+    const signupUser = async (firstName, lastName, email, confirmEmail, password) => {
+        try {
+            const response = await axios.post("http://localhost:8080/api/signup", {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                confirmEmail: confirmEmail,
+                password: password,
+            });
+        }
+    }
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
