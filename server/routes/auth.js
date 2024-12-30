@@ -8,6 +8,7 @@ const router = express.Router();
 
 //Register new user
 router.post('/signup', async (req, res) => {
+    // debug feat console.log('Request Body:', req.body);
     const { firstName, lastName, email, confirmEmail, password } = req.body;
     //Check if user has provided everry entry
     if (!firstName || !lastName || !email || !confirmEmail || !password) {
