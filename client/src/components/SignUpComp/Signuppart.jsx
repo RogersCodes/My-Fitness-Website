@@ -16,7 +16,7 @@ function SignUp () {
 
     const signupUser = async (data) => {
         try {
-            const response = await axios.post("http://localhost:8080/api/signup", data);
+            const response = await axios.post("http://localhost:8080/api/auth/signup", data);
             localStorage.setItem("token", response.data.token);
             navigate('/dashboard');
         } catch (error) {
