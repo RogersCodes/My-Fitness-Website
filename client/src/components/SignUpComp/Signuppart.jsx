@@ -21,7 +21,7 @@ function SignUp () {
             navigate('/dashboard');
         } catch (error) {
             console.error("Signup failed:", error.response?.data?.message || error.message);
-            alert("Signup failed. Please check your details and try again.");
+            alert(error.response?.data?.message || "Signup failed. Please check your details and try again.");
         }
     };
 
