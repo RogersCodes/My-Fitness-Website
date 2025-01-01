@@ -12,7 +12,10 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.post('/dashboard', (req, res) => {
+    console.log(req.body);
+    res.send('Welcome to the dashboard');
+});
 //Connnect to MongoDb
 connectDB();
 
