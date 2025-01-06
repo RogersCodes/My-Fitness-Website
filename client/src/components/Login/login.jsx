@@ -10,7 +10,7 @@ function Login () {
     });
     //logic for signup using the backend API
     const navigateLogin = useNavigate();
-    const loginUser = async (email, passwword) => {
+    const loginUser = async (email, password) => {
         try {
             const response = await fetch("http://localhost:8080/api/login", {
                 method: "POST",
