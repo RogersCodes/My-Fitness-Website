@@ -22,13 +22,18 @@ function Login () {
                 password: password,
             }),
         });
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || "Login failed. Please check your email and password.");
+        }
+             const data = await response.json();
             //Store token from server-side
-            localStorage.setItem("token", response.data.token);
+            localStorage.setItem("token", data.token);
             //Redirect clients workouts and meal plans page
-            navigateLogin('/dashboard')
+            navigateLogin('/dashboard');
         } catch (error) {
-            console.error("Login failed:", error.response?.data?.message || error.message);
-            alert("Login failed. Please check your email and password.");
+            console.error("Login failed:", error.message);
+            alert(error.message);
         }
     };
 
