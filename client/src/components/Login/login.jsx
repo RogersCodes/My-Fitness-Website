@@ -60,10 +60,10 @@ function Login () {
             <h2 className="login-header">Log In</h2>
             <p className="login-intro">Please login to continue</p>
             <form className="login-form">
-                <label htmlFor="login-email"></label>
+                <label htmlFor="login-email">Email</label>
                 <input type="text" id="login-email" placeholder="Your Email" className="login-email-address" name="loginEmail" value={inputData.loginEmail} onChange={handleLoginChange} required></input>
 
-                <label htmlFor="login-password"></label>
+                <label htmlFor="login-password">Password</label>
                 <input type="password" id="login-password" className="login-page-password" aria-label="Enter your password" placeholder="**********" name="loginPassword" value={inputData.loginPassword} onChange={handleLoginChange} required></input>
 
                 <button type="button" className="login-profile-button" aria-label="Proceed to your profile" onClick={handleLoginClick}>Login</button>
