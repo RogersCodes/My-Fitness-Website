@@ -12,10 +12,16 @@ function Login () {
     const navigateLogin = useNavigate();
     const loginUser = async (email, passwword) => {
         try {
-            const response = await axios.post("http://localhost:8080/api/login", {
+            const response = await fetch("http://localhost:8080/api/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
                 email: email,
-                password: passwword,
-            });
+                password: password,
+            }),
+        });
             //Store token from server-side
             localStorage.setItem("token", response.data.token);
             //Redirect clients workouts and meal plans page
