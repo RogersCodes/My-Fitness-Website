@@ -16,12 +16,23 @@ function SignUp () {
 
     const signupUser = async (data) => {
         try {
-            const response = await axios.post("http://localhost:8080/api/auth/signup", data);
-            localStorage.setItem("token", response.data.token);
+            const response = await fetch("http://localhost:8080/api/auth/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || "Signup failed.");
+            }
+            const responseData = await response.json();
+            localStorage.setItem("token", responseData.token);
             navigate('/dashboard');
         } catch (error) {
-            console.error("Signup failed:", error.response?.data?.message || error.message);
-            alert(error.response?.data?.message || "Signup failed. Please check your details and try again.");
+            console.error("Signup failed:", error.message);
+            alert(error.message || "Signup failed. Please check your details and try again.");
         }
     };
 
