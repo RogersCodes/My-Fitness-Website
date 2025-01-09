@@ -10,8 +10,9 @@ const app = express();
 app.use(cors({
     origin: 'http://localhost:3000',
     methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type'],
-    credentials: true
+    allowedHeaders: ['Content-Type', 'Accept', 'OPTIONS'],
+    credentials: true,
+    maxAge: 86400
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
