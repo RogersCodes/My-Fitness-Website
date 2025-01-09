@@ -26,8 +26,13 @@ function SignUp () {
                 body: JSON.stringify(data),
                 credentials: 'include'
             });
+            //Debug log
+            console.log('Response received:', response);
+
             if (!response.ok) {
                 const errorData = await response.json();
+                //another debug log
+                console.log('Success response:', responseData);
                 throw new Error(errorData.message || "Signup failed.");
             }
             const responseData = await response.json();
