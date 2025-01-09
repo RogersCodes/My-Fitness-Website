@@ -15,10 +15,13 @@ function SignUp () {
 
     const signupUser = async (data) => {
         try {
+            //Debug feature
+            console.log('Attempting to send data:', data);
             const response = await fetch("http://localhost:8080/api/auth/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    "Accept": "application/json"
                 },
                 body: JSON.stringify(data),
                 credentials: 'include'
