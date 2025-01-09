@@ -31,8 +31,6 @@ function SignUp () {
 
             if (!response.ok) {
                 const errorData = await response.json();
-                //another debug log
-                console.log('Success response:', responseData);
                 throw new Error(errorData.message || "Signup failed.");
             }
             const responseData = await response.json();
@@ -60,6 +58,11 @@ function SignUp () {
    //form submission
    const handleSubmit = async (e) => {
     e.preventDefault();
+    //check all fields
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.confirmEmail) {
+        setError("Please enter all fields");
+        return;
+    }
     if (handleValidation()) {
         await signupUser({
                 firstName: formData.firstName,
