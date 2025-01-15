@@ -17,6 +17,7 @@ function SignUp () {
         try {
             //Debug feature
             console.log('Attempting to send data:', data);
+            //error is here
             const response = await fetch("http://localhost:8080/api/auth/signup", {
                 method: "POST",
                 headers: {
