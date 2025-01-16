@@ -27,8 +27,7 @@ function SignUp () {
                 body: JSON.stringify(data),
                 credentials: 'include'
             });
-            //Debug log
-            console.log('Response received:', response);
+    
 
             if (!response.ok) {
                 const errorData = await response.json();
