@@ -12,7 +12,7 @@ const Dashboard = () => {
         localStorage.removeItem("token");
         window.location.href = '/';
     };
-
+//add videos and images to the dashboard
     return (
         <div className="dashboard">
             <h1 className="dashboard-header">Welcome to Your Dashboard</h1>
