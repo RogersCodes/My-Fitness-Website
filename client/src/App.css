@@ -481,3 +481,9 @@ main {
     color: #847575;
 }
 /* error page styling */
+
+/*Blog page styling*/
+.featured-blog-heading {
+    margin-top: 0;
+    padding-top: 90px;
+}
