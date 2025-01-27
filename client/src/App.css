@@ -4,6 +4,163 @@ body, html {
     width: 100%;
     overflow-x: hidden;
 }
+/* Navbar styling*/
+.navbar {
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    height: 80px;
+}
+.header-title {
+    white-space: nowrap;
+    font-size: 40px;
+    margin: 0;
+}
+.navbar-list .active {
+    border-bottom: 4px solid #dbcbcb;
+    color: white;
+}
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    background-color: #2C2626;
+}
+.navbar-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.navbar-list h2, .navbar-list li {
+    margin-right: 20px;
+}
+.navbar-list li a, .navbar-list li button {
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.login-button {
+    margin-right: 150px;
+    background-color: #847575;
+    color: white;
+    border-radius: 8px;
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.login-button:hover {
+    background-color: #5B4848;
+    color: #000000;
+}
+ .header-title {
+    color: #7E686A;
+    font-size: 30px;
+}
+.navbar-list li a {
+    color: #847575;
+    transition: color 0.3s ease;
+}
+.navbar-list li a:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+
+.navbar-list li a .login-button,
+.navbar-list li a .signup-button {
+    text-decoration: none;
+}
+
+.navbar-list li a .login-button:hover,
+.navbar-list li a .signup-button:hover {
+    text-decoration: none;
+}
+
+.signup-button {
+    background-color: #847575;
+    color: #000000;
+    font-family: "Aoboshi One", serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.signup-button:hover {
+    background-color:#5B4848;
+    color: #FFFFFF;
+}
+/*Navrbar styling*/
+
+/*Hero styling*/
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-text {
+    position: relative; 
+    color: #F3CBCB;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10; 
+    font-size: 40px;
+    margin-bottom: 20px;
+    mix-blend-mode: difference;
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.hero-button {
+    position: relative; 
+    z-index: 10;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #847575;
+    color: #fff;
+    font-family: "Aoboshi One", serif;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero-button:hover {
+    background-color: #5B4848;
+    color: #000000;
+}
 
  /* Workouts page 1st section styling*/
 .workouts-section-one {
@@ -487,4 +644,204 @@ main {
     margin-top: 0;
     padding-top: 90px;
     text-align: center;
+}
+/*Component styling*/
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.component {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin-top: -16px;
+    position: relative;
+}
+
+
+.component-image {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    z-index: 0;
+}
+.component-text {
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 32px;
+    top: 30%;
+    left: 20px;
+    font-size: 32px;
+    padding: 20px;
+    font-weight: bold;
+    color: #E9DCC9;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+}
+.component-button {
+    margin-top: 16px;
+    padding: 10px 20px;
+    border: none;
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    transition: background-color 0.4s ease;;
+    cursor: pointer;
+    font-size: 32px;
+    border-radius: 8px;
+    background-color: #847575;
+    color: #FFFFFF;
+}
+.component-button:hover {
+    background-color: #5B4848;
+    color: #000000;
+}
+.component-overlay {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #7D5E5E;
+    opacity: 40%;
+}
+
+/*Footer styling*/
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.footer {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(95, 101, 110, 0.5);
+}
+.footer-text {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    font-weight: bold;
+    
+}
+.email-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.highlight-footer-text {
+    color: #A01818;
+}
+.email-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+}
+.footer-input{
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    width: 400px;
+}
+.email-button {
+    height: 40px;
+    width: 200px;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    color: #E8CDCD;
+    background-color: #2A2222;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.email-button:hover {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+}
+/*Contact styling*/
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    padding: 0;
+    background-color: #D9D9D9;
+}
+.contact-title {
+    white-space: nowrap;
+    font-size: 30px;
+    margin: 20px;
+    padding: 10px;
+    color: #5d4c4c;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+}
+.contact-list {
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+    font-weight: bold;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 30px;
+}
+.contact-list-item {
+    margin-right: 90px;
+}
+.contact-list-item a {
+    text-decoration: none;
+    color:#735a5a;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-size: 18px;
+}
+.contact-list-item a:hover {
+    color:#312c2c;
+}
+.contact-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    padding: 40px;
+    margin-right: 100px;
+}
+.instagram-image,
+.x-image,
+.email-image {
+    width: 20px; 
+    height: 20px;
 }
