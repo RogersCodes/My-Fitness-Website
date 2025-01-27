@@ -1,15 +1,15 @@
 import React from "react";
 import Dashboard from "../components/Dashboard/Dashboard";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import Navbar from "../components/HomePage/navbar";
+import Footer from "../components/HomePage/footer";
 
-function Dashboardw () {
-    return (
-        <div>
-            <Navbar />
-            <Dashboard />
-            <Footer />
-        </div>
-    )
+function Dashboardw() {
+  return (
+    <div>
+      <Navbar />
+      <Dashboard />
+      <Footer />
+    </div>
+  );
 }
 export default Dashboardw;

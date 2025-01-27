@@ -1,5 +1,4 @@
 import React from 'react';
-import './philosophy.css';
 
 function Philosophy() {
     return (
@@ -18,4 +17,4 @@ function Philosophy() {
         </div>
     )
 }
-export default Philosophy
+export default Philosophy;
