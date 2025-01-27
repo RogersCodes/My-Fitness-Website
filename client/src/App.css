@@ -1170,3 +1170,7 @@ html, body {
     width: 20px; 
     height: 20px;
 }
+/*signup page styling*/
+.signup {
+    padding: 100px;
+}
