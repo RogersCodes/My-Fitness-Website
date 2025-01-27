@@ -80,13 +80,7 @@ header {
 .navbar-list li a .signup-button:hover {
     text-decoration: none;
 }
-.navbar-list li a.no-underline:hover {
-    text-decoration: none;
-}
-.navbar-list li a.no-underline .login-button:hover,
-.navbar-list li a.no-underline .signup-button:hover {
-    text-decoration: none;
-}
+
 .signup-button {
     background-color: #847575;
     color: #000000;
