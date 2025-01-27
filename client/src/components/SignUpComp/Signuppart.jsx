@@ -175,7 +175,7 @@ function SignUp() {
           <a href="/privacy" className="privacy-policy">
             Privacy Policy
           </a>
-          , and consent to receiving emails from rogersfitnessclub.com.
+          , and consent to receiving emails from <a href="/">rogersfitnessclub.com</a>.
         </p>
         <button
           type="button"
