@@ -9,11 +9,11 @@ function Navbar() {
         <div className="navbar-container">
           <h2 className="header-title">Rogers Fitness Club</h2>
           <ul className="navbar-list">
-            <li><NavLink to="/" activeClassName="active">Home</NavLink></li>
-            <li><NavLink to="/workouts" activeClassName="active">Workouts</NavLink></li>
-            <li><NavLink to="/nutrition" activeClassName="active">Nutrition</NavLink></li>
-            <li><NavLink to="/faqs" activeClassName="active">FAQS</NavLink></li>
-            <li><NavLink to="/blog" activeClassName="active">Blog</NavLink></li>
+            <li><NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink></li>
+            <li><NavLink to="/workouts" className={({ isActive }) => (isActive ? "active" : "")}>Workouts</NavLink></li>
+            <li><NavLink to="/nutrition" className={({ isActive }) => (isActive ? "active" : "")}>Nutrition</NavLink></li>
+            <li><NavLink to="/faqs" className={({ isActive }) => (isActive ? "active" : "")}>FAQS</NavLink></li>
+            <li><NavLink to="/blog" className={({ isActive }) => (isActive ? "active" : "")}>Blog</NavLink></li>
             <li>
               <NavLink to="/login" className="no-underline">
                 <button className="login-button">Login</button>
