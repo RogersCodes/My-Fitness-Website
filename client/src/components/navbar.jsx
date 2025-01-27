@@ -1,8 +1,10 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import './navbar.css';
 
 function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <header>
       <nav className="navbar">
@@ -15,14 +17,11 @@ function Navbar() {
             <li><NavLink to="/faqs" className={({ isActive }) => (isActive ? "active" : "")}>FAQS</NavLink></li>
             <li><NavLink to="/blog" className={({ isActive }) => (isActive ? "active" : "")}>Blog</NavLink></li>
             <li>
-              <NavLink to="/login" className="no-underline">
-                <button className="login-button">Login</button>
-              </NavLink>
+                <button className="login-button" onClick={() => navigate("/login")}>Login</button>
+              
             </li>
             <li>
-              <NavLink to="/signup" className="no-underline">
-                <button className="signup-button">Join Now!</button>
-              </NavLink>
+                <button className="signup-button" onClick={() => navigate("/signup")}>Join Now!</button>
             </li>
           </ul>
         </div>
