@@ -1179,7 +1179,7 @@ html, body {
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1rem;
     max-width: 800px;
 }
 .signup h1, 
@@ -1235,4 +1235,70 @@ html, body {
 }
 .signup-policy a:hover {
     text-decoration: underline;
-  }
+}
+/*Login page stlying*/
+.login-page{
+    margin: 0 auto;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 800px;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+.login-page h2,
+.login-page p{
+    text-align: center;
+    font-weight: bold;
+}
+.login-page label{
+    font-weight: bold;
+}
+.login-page input{
+    padding: 0.5rem;
+    border: 1px solid #a79393;
+    border-radius: 0.25rem;
+}
+.login-profile-button, .reset-password, .join-now-button{
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-family: "Aoboshi One", serif;
+}
+.login-profile-button{
+    color:#000000;
+    background-color: #9c9191;
+}
+.login-profile-button:hover{
+    background-color: #1b1919;
+    color:#eae0e0;
+    transition: background-color 0.2s ease;
+}
+.reset-password{
+    background-color: #afadad;
+    color: #000000;
+}
+.reset-password:hover{
+    background-color: #5c5353;
+    color: #f1e8e8;
+    transition: background-color 0.2s ease;
+}
+.join-now-button{
+    background-color: #fbf9f9;
+    color: #000000;
+}
+.join-now-button:hover{
+    background-color: #d2cdcd;
+    color: #000000;
+    transition: background-color 0.2s ease;
+}
