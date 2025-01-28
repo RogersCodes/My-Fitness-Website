@@ -28,6 +28,7 @@ function Login () {
              const data = await response.json();
             //Store token from server-side
             localStorage.setItem("token", data.token);
+            localStorage.setItem("user", JSON.stringify(data.user));
             //Redirect clients workouts and meal plans page
             navigateLogin('/dashboard');
         } catch (error) {
