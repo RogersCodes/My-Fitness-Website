@@ -26,6 +26,7 @@ function Login () {
             throw new Error(errorData.message || "Login failed. Please check your email and password.");
         }
              const data = await response.json();
+             console.log(`Logged in user:`, data.user); //Log user
             //Store token from server-side
             localStorage.setItem("token", data.token);
             localStorage.setItem("user", JSON.stringify(data.user));
