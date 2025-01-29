@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 //Blogcard
-const BlogCard = ({ title, content, category, image }) => {
+const BlogCard = ({ title, content, category, image, onCategoryClick }) => {
   return (
     <div className="blog-card">
       <img src={image} alt={title} className="blog-image" loading="lazy"/>
       <div className="blog-content">
         <h3 className="blog-header">{title}</h3>
         <p className="blog-paragraph">{content}</p>
-        <span className="category">{category}</span>
+        <span className="category" onClick={() => onCategoryClick(category)}>{category}</span>
         <button className="read-morre-btn">Read More</button>
       </div>
     </div>
@@ -47,6 +47,17 @@ const BlogSection = () => {
       image: "", //show image
     },
   ]);
+  //State for tracking the selected category
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  //handle category clicks
+  const handleCategoryClick = (category) => {
+    selectedCategory(category);
+  };
+  //filter out the selected category
+  const filteredBlogs = selectedCategory
+  ? blogs.filter((blog) => blog.category === selectedCategory)
+  : blogs;
+
   return (
     <div className="blog-section">
       {/*Featured Blog*/}
@@ -57,19 +68,21 @@ const BlogSection = () => {
           content={featuredBlog.content}
           category={featuredBlog.category}
           image={featuredBlog.image}
+          onCategoryClick={handleCategoryClick}
         />
       </div>
       {/* Main Blog Sections*/}
       <div className="blogs">
         <h2 className="blog-lists">Explore Blogs</h2>
         <div className="blog-categories">
-          {blogs.map((blog, index) => (
+          {filteredBlogs.map((blog, index) => (
             <BlogCard
               key={index}
               title={blog.title}
               content={blog.content}
               category={blog.category}
               image={blog.image}
+              onCategoryClick={handleCategoryClick}
             />
           ))}
         </div>

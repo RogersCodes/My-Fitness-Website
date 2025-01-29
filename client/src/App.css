@@ -1326,10 +1326,17 @@ html, body {
 }
 .category {
     display: inline-block;
-    background: #f0f0f0;
+    background-color: #e5d7d7;
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 0.9em;
-    color: #333;
+    color: #464343;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: background-color 0.3s ease;
   }
+.category:hover{
+    background-color: #efe8e8;
+    color: #312c2c;
+}
   
