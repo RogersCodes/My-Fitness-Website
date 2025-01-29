@@ -1302,4 +1302,34 @@ html, body {
     color: #000000;
     transition: background-color 0.2s ease;
 }
+/*Blogcard Styling*/
+.blog-card{
+    border: 1px solid #eddcdc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px #69524716;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+.blog-card:hover{
+    transform: translateY(-5px);
+}
+.blog-image{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+.blog-categories{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.category {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #333;
+  }
   

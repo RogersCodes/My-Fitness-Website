@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const BlogCard = ({ title, content, category, image }) => {
   return (
     <div className="blog-card">
-      <img src={image} alt={title} className="blog-image" />
+      <img src={image} alt={title} className="blog-image" loading="lazy"/>
       <div className="blog-content">
         <h3 className="blog-header">{title}</h3>
         <p className="blog-paragraph">{content}</p>
@@ -21,7 +21,7 @@ const BlogSection = () => {
     content:
       "As the festive season begins, there is so much pressure to take the tasy foods while avoiding weight gain or losing the muscles throughout the year. Here are some tips for this festive season that will help you maintain your body while enjoying the tasy meals and quality time with your friends and family...",
     category: "Tips",
-    image: "", //add image later
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1738132838/20211212_144103_nb6qzj.jpg",
   });
 
   const [blogs, setBlogs] = useState([
@@ -42,7 +42,7 @@ const BlogSection = () => {
     {
       title: "5 Tricks to Stay Motivated As Beginnner",
       content:
-        "It may be easy to stay motivated as a beginner or an experienced athlete. Sometimes, life and  work may get in the way of your fitness goals. Remember a workout is better than no workout at all! On the days that you feel low, find a partner who can push you or simply perform the simple exercises that will improve your mood later and you will be proud of yourself.",
+        "It may not be easy to stay motivated as a beginner or an experienced athlete. Sometimes, life and  work may get in the way of your fitness goals. Remember a workout is better than no workout at all! On the days that you feel low, find a partner who can push you or simply perform the simple exercises that will improve your mood later and you will be proud of yourself.",
       category: "Tips",
       image: "", //show image
     },
