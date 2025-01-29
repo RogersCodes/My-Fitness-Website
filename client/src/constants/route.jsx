@@ -9,6 +9,7 @@ import SignUpPage from '../pages/SignUpPage';
 import LoginPage from '../pages/LoginPage';
 import Dashboardw from '../pages/DashBoard';
 import ProtectedRoute from '../components/Dashboard/DashboardProtectedroute';
+import CategoryBlogs from '../components/Blogs/CategoryBlogs';
 
 const ROUTES = [
     {
@@ -35,6 +36,10 @@ const ROUTES = [
     {
       path: '/blog',
       element: <Blog />
+    },
+    {
+      path: '/blog/:category',
+      element: <CategoryBlogs />
     },
     {
       path: '/signup',
