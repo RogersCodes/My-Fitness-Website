@@ -15,7 +15,7 @@ const BlogCard = ({ title, content, category, image }) => {
         <h3 className="blog-header">{title}</h3>
         <p className="blog-paragraph">{content}</p>
         <span className="category" onClick={handleCategoryClick}>{category}</span>
-        <button className="read-more-btn" type="button">Read More</button>
+        <button className="read-more-btn" type="button" onClick={() => navigate(`/blog/${title.replace(/\s+/g, "-").toLowerCase()}`)>Read More</button>
       </div>
     </div>
   );

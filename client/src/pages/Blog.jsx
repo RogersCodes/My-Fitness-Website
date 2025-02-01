@@ -4,6 +4,7 @@ import Contact from "../components/HomePage/contact";
 import BlogCard from "../components/Blogs/BlogCard";
 import BlogSection from "../components/Blogs/BlogSection";
 import CategoryBlogs from "../components/Blogs/CategoryBlogs";
+import BlogDetails from "../components/Blogs/BlogDetails";
 
 
 function Blog() {
@@ -11,6 +12,7 @@ function Blog() {
     <div className="blog-page">
       <Navbar />
       <BlogCard />
+      <BlogDetails />
       <BlogSection />
       <CategoryBlogs />
       <Contact />
