@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const blogs = [
   {
@@ -23,3 +24,16 @@ const blogs = [
     image: "",
   },
 ];
+const BlogDetails = () => {
+    const { blogTitle } = useParams();
+    const blog = blogs.find((b) => b.title.replace(/\s+/g, "-").toLowerCase() === blogTitle);
+    return (
+        <div className="blog-details">
+            <h2>{blog.title}</h2>
+            <img src={blog.image} alt={blog.title} className="blog-image" />
+            <p>{blog.fullContent}</p>
+        </div>
+    );
+};
+export default BlogDetails;
+
