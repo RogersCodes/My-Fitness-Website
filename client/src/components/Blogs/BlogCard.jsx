@@ -7,6 +7,10 @@ const BlogCard = ({ title, content, category, image }) => {
   const handleCategoryClick = () => {
     navigate(`/blog/${category.toLowerCase()}`);
   };
+  const handleReadMore = () => {
+    const formattedTitle = title.replace(/\s+/g, "-").toLowerCase();
+    navigate(`/blog/${formattedTitle}`);
+  };
 
   return (
     <div className="blog-card">
@@ -15,7 +19,7 @@ const BlogCard = ({ title, content, category, image }) => {
         <h3 className="blog-header">{title}</h3>
         <p className="blog-paragraph">{content}</p>
         <span className="category" onClick={handleCategoryClick}>{category}</span>
-        <button className="read-more-btn" type="button" onClick={() => navigate(`/blog/${title.replace(/\s+/g, "-").toLowerCase()}`)>Read More</button>
+        <button className="read-more-btn" type="button" onClick={handleReadMore}>Read More</button>
       </div>
     </div>
   );

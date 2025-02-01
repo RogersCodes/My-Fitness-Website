@@ -27,6 +27,9 @@ const blogs = [
 const BlogDetails = () => {
     const { blogTitle } = useParams();
     const blog = blogs.find((b) => b.title.replace(/\s+/g, "-").toLowerCase() === blogTitle);
+    if (!blog) {
+        return <h2 style={{ textAlign: "center", marginTop: "20px" }}>Blog not found</h2>;
+      }
     return (
         <div className="blog-details">
             <h2>{blog.title}</h2>

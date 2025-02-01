@@ -10,6 +10,8 @@ import LoginPage from '../pages/LoginPage';
 import Dashboardw from '../pages/DashBoard';
 import ProtectedRoute from '../components/Dashboard/DashboardProtectedroute';
 import CategoryBlogs from '../components/Blogs/CategoryBlogs';
+import BlogDetails from '../components/Blogs/BlogDetails';
+import BlogSection from '../components/Blogs/BlogSection';
 
 const ROUTES = [
     {
@@ -34,12 +36,16 @@ const ROUTES = [
       element: <Faqs />
     },
     {
-      path: '/blog',
-      element: <Blog />
-    },
-    {
       path: '/blog/:category',
       element: <CategoryBlogs />
+    },
+    {
+      path: '/blog/:blogTitle',
+      element: <BlogDetails />
+    },
+    {
+      path: '/blog',
+      element: <BlogSection />
     },
     {
       path: '/signup',
