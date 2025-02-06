@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
+//Add content
 const blogs = [
   {
     title: "3 Exercises for Growing Your Triceps",
