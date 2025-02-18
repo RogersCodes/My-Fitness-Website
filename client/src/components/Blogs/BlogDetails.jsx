@@ -1,6 +1,22 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 //Add content
+const BlogDetails = () => {
+  const { blogTitle } = useParams();
+  const blog = blogs.find((b) => b.title.replace(/\s+/g, "-").toLowerCase() === blogTitle.toLocaleLowerCase());
+  if (!blog) {
+      return <h2 style={{ textAlign: "center", marginTop: "20px" }}>Blog not found</h2>;
+    }
+  return (
+      <div className="blog-details">
+          <h2>{blog.title}</h2>
+          <img src={blog.image} alt={blog.title} className="blog-image" />
+          <p>{blog.fullContent}</p>
+      </div>
+  );
+};
+
+
 const blogs = [
   {
     title: "3 Exercises for Growing Your Triceps",
@@ -24,19 +40,6 @@ const blogs = [
     image: "",
   },
 ];
-const BlogDetails = () => {
-    const { blogTitle } = useParams();
-    const blog = blogs.find((b) => b.title.replace(/\s+/g, "-").toLowerCase() === blogTitle);
-    if (!blog) {
-        return <h2 style={{ textAlign: "center", marginTop: "20px" }}>Blog not found</h2>;
-      }
-    return (
-        <div className="blog-details">
-            <h2>{blog.title}</h2>
-            <img src={blog.image} alt={blog.title} className="blog-image" />
-            <p>{blog.fullContent}</p>
-        </div>
-    );
-};
+
 export default BlogDetails;
 
