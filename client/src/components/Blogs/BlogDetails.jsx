@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 //Add content
 const BlogDetails = () => {
   const { blogTitle } = useParams();
+  console.log("URL Parameter (blogTitle):", blogTitle); 
   const blog = blogs.find((b) => b.title.replace(/\s+/g, "-").toLowerCase() === blogTitle.toLocaleLowerCase());
   if (!blog) {
       return <h2 style={{ textAlign: "center", marginTop: "20px" }}>Blog not found</h2>;
