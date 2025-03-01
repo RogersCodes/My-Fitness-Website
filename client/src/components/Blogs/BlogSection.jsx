@@ -46,7 +46,7 @@ const BlogSection = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   //handle category clicks
   const handleCategoryClick = (category) => {
-    selectedCategory(category);
+    setSelectedCategory(category);
   };
   //filter out the selected category
   const filteredBlogs = selectedCategory
