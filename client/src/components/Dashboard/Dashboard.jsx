@@ -21,6 +21,7 @@ const Dashboard = () => {
     //logout option
     const handleLogout = () => {
         localStorage.removeItem("token");
+        localStorage.removeItem("user");
         window.location.href = '/';
     };
 //add videos and images to the dashboard
