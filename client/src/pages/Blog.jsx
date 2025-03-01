@@ -11,9 +11,7 @@ function Blog() {
   return (
     <div className="blog-page">
       <Navbar />
-      
       <BlogSection />
-      
       <Contact />
     </div>
   );
