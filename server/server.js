@@ -7,6 +7,10 @@ const authRoutes = require('./routes/auth');
 const app = express();
 
 //Middleware functions
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
 app.use(cors({
     origin: 'http://localhost:3000',
     methods: ['GET', 'POST'],
@@ -14,12 +18,7 @@ app.use(cors({
     credentials: true,
     maxAge: 86400
 }));
-app.use((req, res, next) => {
-    console.log(`${req.method} ${req.path}`, req.body);
-    next();
-});
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+
 
 app.post('/dashboard', (req, res) => {
     console.log(req.body);

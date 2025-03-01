@@ -56,8 +56,6 @@ router.post('/login', async (req, res) => {
         if (!isMatch) {
             return res.status(400).json({ message: 'Invalid email or password' });
         }
-        //log the user who signed in
-        console.log(`User logged in: ${user.firstName} ${user.lastName} ${user.email}`);
 
         //Create and sign a JWT token
         const token = jwt.sign(
