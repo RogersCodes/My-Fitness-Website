@@ -21,7 +21,7 @@ const CategoryBlogs = () => {
           image: "", //show image
         },
         {
-          title: "5 Tricks to Stay Motivated As Beginnner",
+          title: "5 Tricks to Stay Motivated As Beginner",
           content:
             "It may not be easy to stay motivated as a beginner or an experienced athlete. Sometimes, life and  work may get in the way of your fitness goals. Remember a workout is better than no workout at all! On the days that you feel low, find a partner who can push you or simply perform the simple exercises that will improve your mood later and you will be proud of yourself.",
           category: "Tips",

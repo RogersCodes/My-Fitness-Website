@@ -11,10 +11,9 @@ function Blog() {
   return (
     <div className="blog-page">
       <Navbar />
-      <BlogCard />
-      <BlogDetails />
+      
       <BlogSection />
-      <CategoryBlogs />
+      
       <Contact />
     </div>
   );

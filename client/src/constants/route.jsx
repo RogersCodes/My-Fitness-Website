@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import Home from '../pages/home';
 import Workouts from '../pages/Workouts';
 import NoPage from '../pages/NoPage';
@@ -45,7 +45,21 @@ const ROUTES = [
     },
     {
       path: '/blog',
-      element: <BlogSection />
+      element: <Blog />,
+      children: [
+        {
+          path: '',
+          element: <CategoryBlogs />
+        },
+        {
+          path: ':category',
+          element: <CategoryBlogs />
+        },
+        {
+          path: ':category/:blogTitle',
+          element: <BlogDetails />,
+        }
+      ]
     },
     {
       path: '/signup',
@@ -57,12 +71,8 @@ const ROUTES = [
     },
     {
       path: '/dashboard',
-      element: <Dashboardw />
+      element: <ProtectedRoute><Dashboardw /></ProtectedRoute>
     },
-    {
-      path: '/dashboard',
-      element: <ProtectedRoute />
-    }
   ];
   
   export default ROUTES;
