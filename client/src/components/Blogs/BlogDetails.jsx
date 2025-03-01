@@ -28,7 +28,8 @@ const blogs = [
 const BlogDetails = () => {
   const { blogTitle } = useParams();
   console.log("URL Parameter (blogTitle):", blogTitle); 
-  const blog = blogs.find((b) => b.title.replace(/\s+/g, "-").toLowerCase() === blogTitle.toLocaleLowerCase());
+  const formattedTitle = blogTitle.replace(/-/g, "");
+  const blog = blogs.find((b) => b.title.toLowerCase() === formattedTitle.toLowerCase());
   if (!blog) {
       return <h2 style={{ textAlign: "center", marginTop: "20px" }}>Blog not found</h2>;
     }
@@ -40,8 +41,5 @@ const BlogDetails = () => {
       </div>
   );
 };
-
-
-
 export default BlogDetails;
 
