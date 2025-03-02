@@ -43,6 +43,9 @@ const userSchema = new Schema({
         required: true,
         minlength: 6,
     },
+    services: [{
+        type: String
+    }],
 });
 
 //Hashing password before saving

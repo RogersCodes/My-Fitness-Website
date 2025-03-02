@@ -79,4 +79,32 @@ router.post('/login', async (req, res) => {
         res.status(500).json({ message: 'Server error', error: error.message });
     }
 });
+// booking service
+router.post('/book-service', async (req, res) => {
+    const { userId, service } = req.body;
+    //validate input
+    const validServices = ["meal-plan", "workout"];
+    if (!validServices.includes(service)) {
+        return res.status(400).json({ message: "Invalid service selected" });
+    }
+    try {
+        //find users by their id
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        //Store services enterred
+        if (!user.services) {
+            user.services = [];
+        }
+        user.services.push(service);
+        await user.save();
+        return res.json({ 
+            message: `You have succesfully booked for a ${service.replace("-", "")}. Rogers will reach out to you via email.`,
+        });
+    } catch (error) {
+        console.error("Error booking service:", error);
+        res.status(500).json({ message: "Server error. Try again later."});
+    }
+});
 module.exports = router;
