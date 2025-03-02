@@ -1339,4 +1339,54 @@ html, body {
     background-color: #efe8e8;
     color: #312c2c;
 }
+/*dashboard*/
+.dashboard {
+    text-align: center;
+    padding: 20px;
+}
+
+.dashboard-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.services {
+    margin: 20px 0;
+}
+
+.service-button {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.service-button:hover {
+    background-color: #0056b3;
+}
+
+.booking-message {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+}
+
+.logout-button {
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    background-color: darkred;
+}
+
   
