@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors({
     origin: 'http://localhost:3000',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Accept', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'OPTIONS'],
     credentials: true,
     maxAge: 86400
 }));

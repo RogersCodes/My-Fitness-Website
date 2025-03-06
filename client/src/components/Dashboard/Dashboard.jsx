@@ -18,7 +18,7 @@ const Dashboard = () => {
         console.log("Fetched user:", user); //debug
         if (user) {
             setFirstName(user.firstName);
-            setUserId(user.id);
+            setUserId(user._id);
         }
     }, []);
 
