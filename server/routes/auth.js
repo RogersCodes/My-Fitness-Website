@@ -81,6 +81,7 @@ router.post('/login', async (req, res) => {
 });
 // booking service
 router.post('/book-service', async (req, res) => {
+    console.log("Incoming request body:", req.body); //debugging line
     const { userId, service } = req.body;
     //validate input
     const validServices = ["meal-plan", "workout"];
