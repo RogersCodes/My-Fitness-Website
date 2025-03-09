@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-//Add content
+
+// Blog Data
 const blogs = [
   {
     title: "3 Exercises for Growing Your Triceps",
@@ -27,19 +28,27 @@ const blogs = [
 
 const BlogDetails = () => {
   const { blogTitle } = useParams();
-  console.log("URL Parameter (blogTitle):", blogTitle); 
-  const formattedTitle = blogTitle.replace(/-/g, "");
-  const blog = blogs.find((b) => b.title.toLowerCase() === formattedTitle.toLowerCase());
+  console.log("URL Parameter (blogTitle):", blogTitle);
+
+  // Format title to match URL structure
+  const formattedTitle = blogTitle.replace(/-/g, " ").toLowerCase();
+
+  // Find matching blog
+  const blog = blogs.find(
+    (b) => b.title.toLowerCase() === formattedTitle
+  );
+
   if (!blog) {
-      return <h2 style={{ textAlign: "center", marginTop: "20px" }}>Blog not found</h2>;
-    }
+    return <h2 style={{ textAlign: "center", marginTop: "20px" }}>Blog not found</h2>;
+  }
+
   return (
-      <div className="blog-details">
-          <h2>{blog.title}</h2>
-          <img src={blog.image} alt={blog.title} className="blog-image" />
-          <p>{blog.fullContent}</p>
-      </div>
+    <div className="blog-details">
+      <h2>{blog.title}</h2>
+      {blog.image && <img src={blog.image} alt={blog.title} className="blog-image" />}
+      <p>{blog.fullContent}</p>
+    </div>
   );
 };
-export default BlogDetails;
 
+export default BlogDetails;

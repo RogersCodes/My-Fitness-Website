@@ -2,38 +2,41 @@ import React from "react";
 import BlogCard from "./BlogCard";
 import { useParams } from "react-router-dom";
 
+const blogs = [
+  {
+    title: "3 Exercises for Growing Your Triceps",
+    fullContent:
+      "These workouts will grow the size of your arms without spending too much time at the gym...",
+    category: "Exercise",
+    image: "",
+  },
+  {
+    title: "Meal Prep Ideas During the Holiday Season",
+    fullContent:
+      "The holiday season is a time to relax, enjoy, and spend time with loved ones...",
+    category: "Nutrition",
+    image: "",
+  },
+  {
+    title: "5 Tricks to Stay Motivated As a Beginner",
+    fullContent:
+      "It may not be easy to stay motivated as a beginner or an experienced athlete...",
+    category: "Tips",
+    image: "",
+  },
+];
+
 const CategoryBlogs = () => {
   const { category } = useParams();
 
-  const blogs = [
-    {
-      title: "3 Exercises for Growing Your Triceps",
-      fullContent:
-        "These workouts will grow the size of your arm without spending so much time at the gym...",
-      category: "Exercise",
-      image: "",
-    },
-    {
-      title: "Meal Prep Ideas During the Holiday Season",
-      fullContent:
-        "The holiday season is a time to relax, enjoy, and spend time with loved ones...",
-      category: "Nutrition",
-      image: "",
-    },
-    {
-      title: "5 Tricks to Stay Motivated As Beginner",
-      fullContent:
-        "It may not be easy to stay motivated as a beginner or an experienced athlete...",
-      category: "Tips",
-      image: "",
-    },
-  ];
+  // Normalize category names for comparison
+  const formattedCategory = category.replace(/\s+/g, "-").toLowerCase();
 
+  // Filter blogs based on category
   const filteredBlogs = blogs.filter(
     (blog) =>
       blog.category &&
-      category &&
-      blog.category.toLowerCase() === category.toLowerCase()
+      formattedCategory === blog.category.replace(/\s+/g, "-").toLowerCase()
   );
 
   return (
@@ -51,7 +54,7 @@ const CategoryBlogs = () => {
             />
           ))
         ) : (
-          <p>No blogs found in this category.</p>
+          <p>No blogs found in this category. Check out other categories!</p>
         )}
       </div>
     </div>
