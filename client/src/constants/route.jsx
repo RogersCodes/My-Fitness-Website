@@ -11,6 +11,7 @@ import Dashboardw from '../pages/DashBoard';
 import ProtectedRoute from '../components/Dashboard/DashboardProtectedroute';
 import CategoryBlogs from '../components/Blogs/CategoryBlogs';
 import BlogDetails from '../components/Blogs/BlogDetails';
+import FullBlog from '../components/Blogs/FullBlog';
 
 const ROUTES = [
   {
@@ -23,43 +24,41 @@ const ROUTES = [
     element: <Workouts />,
   },
   {
-    path: '*',
-    element: <NoPage />
-  },
-  {
     path: '/nutrition',
-    element: <NutritionPage />
+    element: <NutritionPage />,
   },
   {
     path: '/faqs',
-    element: <Faqs />
+    element: <Faqs />,
   },
   {
     path: '/blog',
     element: <Blog />,
   },
   {
-    path: '/blog/category/:category',
-    element: <CategoryBlogs />
+    path: '/blog/category/:category', // Category page
+    element: <CategoryBlogs />,
   },
   {
-    path: '/blog/:category/:blogTitle',
-    element: <BlogDetails />
+    path: '/blog/:category/:blogTitle', // Blog details page
+    element: <FullBlog />, // Ensure this component is correctly imported
   },
   {
     path: '/signup',
-    element: <SignUpPage />
+    element: <SignUpPage />,
   },
   {
     path: '/login',
-    element: <LoginPage />
+    element: <LoginPage />,
   },
   {
     path: '/dashboard',
-    element: <ProtectedRoute><Dashboardw /></ProtectedRoute>
+    element: <ProtectedRoute><Dashboardw /></ProtectedRoute>,
+  },
+  {
+    path: '*',
+    element: <NoPage />, // Catch-all for non-existent pages
   },
 ];
 
 export default ROUTES;
-
-  
