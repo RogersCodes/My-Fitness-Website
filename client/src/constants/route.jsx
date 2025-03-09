@@ -11,69 +11,55 @@ import Dashboardw from '../pages/DashBoard';
 import ProtectedRoute from '../components/Dashboard/DashboardProtectedroute';
 import CategoryBlogs from '../components/Blogs/CategoryBlogs';
 import BlogDetails from '../components/Blogs/BlogDetails';
-import BlogSection from '../components/Blogs/BlogSection';
 
 const ROUTES = [
-    {
-      path: '/',
-      element: <Home />,
-      index: true,
-    },
-    {
-      path: '/workouts',
-      element: <Workouts />,
-    },
-    {
-      path: '*',
-      element: <NoPage />
-    },
-    {
-      path: '/nutrition',
-      element: <NutritionPage />
-    },
-    {
-      path: '/faqs',
-      element: <Faqs />
-    },
-    {
-      path: '/blog/:category',
-      element: <CategoryBlogs />
-    },
-    {
-      path: '/blog/:blogTitle',
-      element: <BlogDetails />
-    },
-    {
-      path: '/blog',
-      element: <Blog />,
-      children: [
-        {
-          path: '',
-          element: <CategoryBlogs />
-        },
-        {
-          path: ':category',
-          element: <CategoryBlogs />
-        },
-        {
-          path: ':category/:blogTitle',
-          element: <BlogDetails />,
-        }
-      ]
-    },
-    {
-      path: '/signup',
-      element: <SignUpPage />
-    },
-    {
-      path: '/login',
-      element: <LoginPage />
-    },
-    {
-      path: '/dashboard',
-      element: <ProtectedRoute><Dashboardw /></ProtectedRoute>
-    },
-  ];
-  
-  export default ROUTES;
+  {
+    path: '/',
+    element: <Home />,
+    index: true,
+  },
+  {
+    path: '/workouts',
+    element: <Workouts />,
+  },
+  {
+    path: '*',
+    element: <NoPage />
+  },
+  {
+    path: '/nutrition',
+    element: <NutritionPage />
+  },
+  {
+    path: '/faqs',
+    element: <Faqs />
+  },
+  {
+    path: '/blog',
+    element: <Blog />,
+  },
+  {
+    path: '/blog/category/:category',
+    element: <CategoryBlogs />
+  },
+  {
+    path: '/blog/:category/:blogTitle',
+    element: <BlogDetails />
+  },
+  {
+    path: '/signup',
+    element: <SignUpPage />
+  },
+  {
+    path: '/login',
+    element: <LoginPage />
+  },
+  {
+    path: '/dashboard',
+    element: <ProtectedRoute><Dashboardw /></ProtectedRoute>
+  },
+];
+
+export default ROUTES;
+
   
