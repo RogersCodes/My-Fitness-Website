@@ -1396,40 +1396,56 @@ html, body {
 .blog-title {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 40px;
     color: #333;
     font-family: "Aoboshi One", serif;
-  }
+}
 .blog-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
 }
+@media (max-width: 900px) {
+    .blog-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .blog-section {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}  
 .blog-card:hover {
     transform: translateY(-5px);
-  }
-  .blog-card {
+}
+.blog-card {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-  }
+    background-color: #857d7d;
+}
+.blog-head {
+    color:#272626
+}
 .blog-image {
     width: 100%;
     height: 200px;
     height: auto;
     max-height: 250px;
-  }
-  .blog-category {
+}
+.blog-category {
     display: block;
-    color: #007bff;
+    color: #292828;
     cursor: pointer;
     margin-top: 5px;
-  }
-  .blog-category:hover {
+    transition: color 0.4s ease;
+}
+.blog-category:hover {
     text-decoration: underline;
-  }
+    color: #b0a8a8;
+}
   

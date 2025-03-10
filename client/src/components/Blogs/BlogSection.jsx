@@ -16,6 +16,21 @@ const blogs = [
     category: "Tips",
     image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1741581837/14_ou9kv8.jpg",
   },
+  {
+    title: "Common Misconceptions at the Gym",
+    category: "Tips",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1741589291/IMG_7314_u4cvye.jpg",
+  },
+  {
+    title: "Reasons You Are Taking Longer to Achieve Your Goals",
+    category: "Tips",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1741589591/20190903085853_IMG_2929_oite80.jpg",
+  },
+  {
+    title: "Why Rushing Into Supplements is Not a Great Idea",
+    category: "Tips",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/t_Creatine_mono/v1741590958/creatine_wfwp5h.webp",
+  },
 ];
 
 const BlogSection = () => {
@@ -32,7 +47,7 @@ const BlogSection = () => {
           <div key={index} className="blog-card">
             <img src={blog.image} alt={blog.title} className="blog-image" />
             <h3>
-              <Link to={`/blog/${blog.category.toLowerCase()}/${encodeURIComponent(blog.title.toLowerCase().replace(/\s+/g, "-"))}`}>
+              <Link to={`/blog/${blog.category.toLowerCase()}/${encodeURIComponent(blog.title.toLowerCase().replace(/\s+/g, "-"))}`} className="blog-head">
                 {blog.title}
               </Link>
             </h3>

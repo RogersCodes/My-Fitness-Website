@@ -5,17 +5,32 @@ const blogs = [
   {
     title: "3 Exercises for Growing Your Triceps",
     category: "Exercise",
-    image: "/images/triceps.jpg",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1741583385/8_fwnlpt.jpg",
   },
   {
     title: "Meal Prep Ideas During the Holiday Season",
     category: "Nutrition",
-    image: "/images/mealprep.jpg",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1738129978/cld-sample-4.jpg",
   },
   {
     title: "5 Tricks to Stay Motivated As a Beginner",
     category: "Tips",
-    image: "/images/motivation.jpg",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1741581837/14_ou9kv8.jpg",
+  },
+  {
+    title: "Common Misconceptions at the Gym",
+    category: "Tips",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1741589291/IMG_7314_u4cvye.jpg",
+  },
+  {
+    title: "Reasons You Are Taking Longer to Achieve Your Goals",
+    category: "Tips",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1741589591/20190903085853_IMG_2929_oite80.jpg",
+  },
+  {
+    title: "Why Rushing Into Supplements is Not a Great Idea",
+    category: "Tips",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/t_Creatine_mono/v1741590958/creatine_wfwp5h.webp",
   },
 ];
 
