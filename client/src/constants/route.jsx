@@ -10,7 +10,6 @@ import LoginPage from '../pages/LoginPage';
 import Dashboardw from '../pages/DashBoard';
 import ProtectedRoute from '../components/Dashboard/DashboardProtectedroute';
 import CategoryBlogs from '../components/Blogs/CategoryBlogs';
-import BlogDetails from '../components/Blogs/BlogDetails';
 import FullBlog from '../components/Blogs/FullBlog';
 
 const ROUTES = [

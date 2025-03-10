@@ -1,77 +1,41 @@
-import React, { useState } from "react";
-import BlogCard from "./BlogCard";
+import { Link, useNavigate } from "react-router-dom";
+
+const blogs = [
+  {
+    title: "3 Exercises for Growing Your Triceps",
+    category: "Exercise",
+    image: "/images/triceps.jpg",
+  },
+  {
+    title: "Meal Prep Ideas During the Holiday Season",
+    category: "Nutrition",
+    image: "/images/mealprep.jpg",
+  },
+  {
+    title: "5 Tricks to Stay Motivated As a Beginner",
+    category: "Tips",
+    image: "/images/motivation.jpg",
+  },
+];
 
 const BlogSection = () => {
-  const [featuredBlog] = useState({
-    title: "Top 5 Tips to Maintain Your Physique During Holiday Season",
-    fullContent:
-      "As the festive season begins, there is so much pressure to take the tasty foods while avoiding weight gain or losing the muscles throughout the year. Here are some tips for this festive season that will help you maintain your body while enjoying the tasty meals and quality time with your friends and family...",
-    category: "Tips",
-    image:
-      "https://res.cloudinary.com/dnbkxuia3/image/upload/v1738132838/20211212_144103_nb6qzj.jpg",
-  });
-
-  const [blogs] = useState([
-    {
-      title: "3 Exercises for Growing Your Triceps",
-      fullContent:
-        "Triceps are an important muscle group. Here are three exercises...",
-      category: "Exercise",
-      image: "", 
-    },
-    {
-      title: "Meal Prep Ideas During the Holiday Season",
-      fullContent:
-        "The holiday season is a time to relax and enjoy, but that doesn’t mean you have to throw your fitness progress out the window...",
-      category: "Nutrition",
-      image: "", 
-    },
-    {
-      title: "5 Tricks to Stay Motivated As Beginner",
-      fullContent:
-        "Here is my advice regarding how I stayed motivated as a beginner...",
-      category: "Tips",
-      image: "", 
-    },
-  ]);
-
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
-  };
-
-  const filteredBlogs = selectedCategory
-    ? blogs.filter((blog) => blog.category === selectedCategory)
-    : blogs;
+  const navigate = useNavigate();
 
   return (
     <div className="blog-section">
-      <div className="featured-blog">
-        <h2 className="featured-blog-heading">Featured Blog</h2>
-        <BlogCard
-          title={featuredBlog.title}
-          fullContent={featuredBlog.fullContent}
-          category={featuredBlog.category}
-          image={featuredBlog.image}
-          onCategoryClick={handleCategoryClick}
-        />
-      </div>
-      <div className="blogs">
-        <h2 className="blog-lists">Explore Blogs</h2>
-        <div className="blog-categories">
-          {filteredBlogs.map((blog, index) => (
-            <BlogCard
-              key={index}
-              title={blog.title}
-              fullContent={blog.fullContent}
-              category={blog.category}
-              image={blog.image}
-              onCategoryClick={handleCategoryClick}
-            />
-          ))}
+      {blogs.map((blog, index) => (
+        <div key={index} className="blog-card">
+          <img src={blog.image} alt={blog.title} className="blog-image" />
+          <h3>
+            <Link to={`/blog/${blog.category.toLowerCase()}/${encodeURIComponent(blog.title.toLowerCase().replace(/\s+/g, "-"))}`}>
+              {blog.title}
+            </Link>
+          </h3>
+          <span className="blog-category" onClick={() => navigate(`/category/${blog.category.toLowerCase()}`)}>
+            {blog.category}
+          </span>
         </div>
-      </div>
+      ))}
     </div>
   );
 };

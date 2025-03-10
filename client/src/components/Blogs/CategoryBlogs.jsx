@@ -1,52 +1,52 @@
 import React from "react";
-import BlogCard from "./BlogCard";
-import { useParams } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 const blogs = [
   {
     title: "3 Exercises for Growing Your Triceps",
-    fullContent: "These workouts will grow the size of your arms without spending too much time at the gym...",
     category: "Exercise",
-    image: "",
+    image: "/images/triceps.jpg",
   },
   {
     title: "Meal Prep Ideas During the Holiday Season",
-    fullContent: "The holiday season is a time to relax, enjoy, and spend time with loved ones...",
     category: "Nutrition",
-    image: "",
+    image: "/images/mealprep.jpg",
   },
   {
     title: "5 Tricks to Stay Motivated As a Beginner",
-    fullContent: "It may not be easy to stay motivated as a beginner or an experienced athlete...",
     category: "Tips",
-    image: "",
+    image: "/images/motivation.jpg",
   },
 ];
 
 const CategoryBlogs = () => {
   const { category } = useParams();
+  const navigate = useNavigate();
 
-  // Filter blogs by category
-  const filteredBlogs = blogs.filter(
-    (blog) => blog.category.toLowerCase() === category.toLowerCase()
-  );
+  const filteredBlogs = blogs.filter((blog) => blog.category.toLowerCase() === category.toLowerCase());
 
   return (
     <div className="category-blogs">
+      <button onClick={() => navigate(-1)} className="back-button">← Back to Blogs</button>
       <h2>Blogs in {category}</h2>
-      <div className="blog-categories">
+
+      <div className="blog-list">
         {filteredBlogs.length > 0 ? (
           filteredBlogs.map((blog, index) => (
-            <BlogCard
-              key={index}
-              title={blog.title}
-              fullContent={blog.fullContent}
-              category={blog.category}
-              image={blog.image}
-            />
+            <div key={index} className="blog-card">
+              <img src={blog.image} alt={blog.title} className="blog-image" />
+              <h3>
+                <Link to={`/blog/${category.toLowerCase()}/${encodeURIComponent(blog.title.toLowerCase().replace(/\s+/g, "-"))}`}>
+                  {blog.title}
+                </Link>
+              </h3>
+              <span className="blog-category" onClick={() => navigate(`/category/${blog.category.toLowerCase()}`)}>
+                {blog.category}
+              </span>
+            </div>
           ))
         ) : (
-          <p>No blogs found in this category. Check out other categories!</p>
+          <p>No blogs found in this category.</p>
         )}
       </div>
     </div>
