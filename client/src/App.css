@@ -1491,3 +1491,11 @@ html, body {
     background-color:#625e5e;
     color:#e3d2d2;
 }
+/*styling full blog*/
+
+.full-blog-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Aoboshi One", serif;
+}

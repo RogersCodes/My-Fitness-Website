@@ -1,5 +1,7 @@
 import React from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import Navbar from "../HomePage/navbar";
+import Footer from "../HomePage/footer";
 
 const blogs = [
   {
@@ -41,6 +43,8 @@ const CategoryBlogs = () => {
   const filteredBlogs = blogs.filter((blog) => blog.category.toLowerCase() === category.toLowerCase());
 
   return (
+    <>
+    <Navbar />
     <div className="category-blogs">
       <button onClick={() => navigate(-1)} className="back-button">← Back to Blogs</button>
       <h2 className="blogs-in">Blogs in {category}</h2>
@@ -65,6 +69,9 @@ const CategoryBlogs = () => {
         )}
       </div>
     </div>
+    <Footer />
+    </>
+    
   );
 };
 

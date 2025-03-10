@@ -1,5 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Navbar from "../HomePage/navbar";
+import Contact from "../HomePage/contact";
 
 const blogs = [
   {
@@ -44,14 +46,19 @@ const FullBlog = () => {
   }
 
   return (
+    <>
+    <Navbar />
     <div className="full-blog">
       <button onClick={() => navigate(-1)} className="back-button">← Back</button>
-      <h1>{blog.title}</h1>
+      <h1 className="full-blog-title">{blog.title}</h1>
       <img src={blog.image} alt={blog.title} className="blog-image" />
       {blog.fullContent.map((paragraph, index) => (
         <p key={index} className="full-blog-paragraph">{paragraph}</p>
       ))}
     </div>
+    <Contact />
+    </>
+    
   );
 };
 
