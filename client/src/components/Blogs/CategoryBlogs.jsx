@@ -43,7 +43,7 @@ const CategoryBlogs = () => {
   return (
     <div className="category-blogs">
       <button onClick={() => navigate(-1)} className="back-button">← Back to Blogs</button>
-      <h2>Blogs in {category}</h2>
+      <h2 className="blogs-in">Blogs in {category}</h2>
 
       <div className="blog-list">
         {filteredBlogs.length > 0 ? (
@@ -51,7 +51,7 @@ const CategoryBlogs = () => {
             <div key={index} className="blog-card">
               <img src={blog.image} alt={blog.title} className="blog-image" />
               <h3>
-                <Link to={`/blog/${category.toLowerCase()}/${encodeURIComponent(blog.title.toLowerCase().replace(/\s+/g, "-"))}`}>
+                <Link to={`/blog/${category.toLowerCase()}/${encodeURIComponent(blog.title.toLowerCase().replace(/\s+/g, "-"))}`} className="blog-category-head">
                   {blog.title}
                 </Link>
               </h3>

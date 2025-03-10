@@ -1448,4 +1448,34 @@ html, body {
     text-decoration: underline;
     color: #b0a8a8;
 }
-  
+/*Stlying blog category */
+.category-blog {
+    text-align: center;
+    padding: 20px;
+}
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .blog-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .blog-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}  
+.blog-category-head {
+    color:#342c2c;
+}
+.blogs-in {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: "Aoboshi One", serif;
+}
