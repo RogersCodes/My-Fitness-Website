@@ -3,7 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 
 const blogs = [
   {
-    title: "3 Exercises for Growing Your Triceps",
+    title: "Exercises for Growing Your Triceps",
     category: "Exercise",
     image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1741583385/8_fwnlpt.jpg",
   },

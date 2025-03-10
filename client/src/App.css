@@ -1479,3 +1479,15 @@ html, body {
     font-size: 2rem;
     font-family: "Aoboshi One", serif;
 }
+.back-button {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #908787;
+    font-family: "Aoboshi One", serif;
+    cursor: pointer;
+}
+.back-button:hover {
+    background-color:#625e5e;
+    color:#e3d2d2;
+}
