@@ -4,12 +4,12 @@ const blogs = [
   {
     title: "3 Exercises for Growing Your Triceps",
     category: "Exercise",
-    image: "/images/triceps.jpg",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1741583385/8_fwnlpt.jpg",
   },
   {
     title: "Meal Prep Ideas During the Holiday Season",
     category: "Nutrition",
-    image: "/images/mealprep.jpg",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1738129978/cld-sample-4.jpg",
   },
   {
     title: "5 Tricks to Stay Motivated As a Beginner",

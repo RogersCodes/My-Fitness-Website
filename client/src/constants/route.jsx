@@ -40,7 +40,7 @@ const ROUTES = [
   },
   {
     path: '/blog/:category/:blogTitle', // Blog details page
-    element: <FullBlog />, // Ensure this component is correctly imported
+    element: <FullBlog />,
   },
   {
     path: '/signup',
