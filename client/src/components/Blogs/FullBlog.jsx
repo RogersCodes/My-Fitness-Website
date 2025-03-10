@@ -51,7 +51,7 @@ const FullBlog = () => {
     <div className="full-blog">
       <button onClick={() => navigate(-1)} className="back-button">← Back</button>
       <h1 className="full-blog-title">{blog.title}</h1>
-      <img src={blog.image} alt={blog.title} className="blog-image" />
+      <img src={blog.image} alt={blog.title} className="full-blog-image" />
       {blog.fullContent.map((paragraph, index) => (
         <p key={index} className="full-blog-paragraph">{paragraph}</p>
       ))}
