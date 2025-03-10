@@ -14,7 +14,7 @@ const blogs = [
   {
     title: "5 Tricks to Stay Motivated As a Beginner",
     category: "Tips",
-    image: "/images/motivation.jpg",
+    image: "https://res.cloudinary.com/dnbkxuia3/image/upload/v1741581837/14_ou9kv8.jpg",
   },
 ];
 
