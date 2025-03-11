@@ -11,6 +11,7 @@ import Dashboardw from '../pages/DashBoard';
 import ProtectedRoute from '../components/Dashboard/DashboardProtectedroute';
 import CategoryBlogs from '../components/Blogs/CategoryBlogs';
 import FullBlog from '../components/Blogs/FullBlog';
+import Terms from '../components/TermsOfService/Terms';
 
 const ROUTES = [
   {
@@ -58,6 +59,10 @@ const ROUTES = [
     path: '*',
     element: <NoPage />, // Catch-all for non-existent pages
   },
+  {
+    path: '/terms',
+    element: <Terms />,
+  }
 ];
 
 export default ROUTES;
