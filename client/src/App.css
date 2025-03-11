@@ -1370,7 +1370,7 @@ html, body {
     padding: 10px 15px;
     margin: 10px;
     border: none;
-    background-color: #007bff;
+    background-color: #484c50;
     color: white;
     cursor: pointer;
     border-radius: 5px;
@@ -1384,7 +1384,7 @@ html, body {
 .booking-message {
     margin-top: 10px;
     font-weight: bold;
-    color: green;
+    color: rgb(72, 52, 52);
 }
 
 .logout-button {
