@@ -77,6 +77,18 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <h1 className="dashboard-header">Welcome, {firstName}</h1>
+      <div className="services-description">
+        <p className="leading-services">My services include:</p>
+        <p>💎 Insulin Optimization</p>
+        <p>💎 Meal Timing Strategies</p>
+        <p>💎 PCOS Management</p>
+        <p>💎 Weight Loss</p>
+        <p>💎 Fat Loss</p>
+        <p>💎 Muscle Gain</p>
+        <p>💎 Weight Gain</p>
+        <p>💎 Strength and Hypertrophy</p>
+        <p>💎 Supplementation</p>
+      </div>
       <div className="services">
         <h3 className="service-header">Select a Service:</h3>
         <button

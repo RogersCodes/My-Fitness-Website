@@ -1342,16 +1342,28 @@ html, body {
 /*dashboard*/
 .dashboard {
     text-align: center;
-    padding: 20px;
+    padding: 40px;
+    background-color: #f5e9e3;
 }
-
 .dashboard-header {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-top: 100px;
+    font-size: 2rem;
+    font-family: "Aoboshi One", serif;
 }
-
+.service-header {
+    font-size: 1.5rem;
+    font-family: "Aoboshi One", serif;
+}
 .services {
     margin: 20px 0;
+}
+.services-description {
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: "Aoboshi One", serif;
+    margin: 20px 0;
+   
 }
 
 .service-button {

@@ -8,7 +8,7 @@ const router = express.Router();
 
 //Register new user
 router.post('/signup', async (req, res) => {
-    // debug feat console.log('Request Body:', req.body);
+    console.log('Request Body:', req.body);
     const { firstName, lastName, password } = req.body;
     const email = req.body.email.toLowerCase();
     const confirmEmail = req.body.confirmEmail.toLowerCase();
