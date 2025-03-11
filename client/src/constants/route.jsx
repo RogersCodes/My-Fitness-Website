@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from '../pages/home';
+import Home from '../pages/Home';
 import Workouts from '../pages/Workouts';
 import NoPage from '../pages/NoPage';
 import NutritionPage from '../pages/NutritionPage';
