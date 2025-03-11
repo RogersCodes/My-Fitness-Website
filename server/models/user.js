@@ -44,7 +44,9 @@ const userSchema = new Schema({
         minlength: 6,
     },
     services: [{
-        type: String
+        type: String,
+        enum: ["meal-plan", "workout"],
+        default: [],
     }],
 });
 

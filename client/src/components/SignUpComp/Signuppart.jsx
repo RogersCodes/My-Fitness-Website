@@ -16,7 +16,7 @@ function SignUp() {
   const signupUser = async (data) => {
     try {
         console.log(data);
-      const response = await fetch("http://localhost:8080/api/auth/signup", {
+        const response = await fetch("http://localhost:8080/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -32,6 +32,7 @@ function SignUp() {
       }
       const responseData = await response.json();
       localStorage.setItem("token", responseData.token);
+      localStorage.setItem("user", JSON.stringify(responseData.user));
       navigate("/dashboard");
     } catch (error) {
       console.error("Signup failed:", error.message);

@@ -1,6 +1,6 @@
 const express = require('express');
 const User = require('../models/user');
-const bcrypt = require('bcryptjs');
+const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 
@@ -9,8 +9,10 @@ const router = express.Router();
 //Register new user
 router.post('/signup', async (req, res) => {
     // debug feat console.log('Request Body:', req.body);
-    const { firstName, lastName, email, confirmEmail, password } = req.body;
-    //Check if user has provided everry entry
+    const { firstName, lastName, password } = req.body;
+    const email = req.body.email.toLowerCase();
+    const confirmEmail = req.body.confirmEmail.toLowerCase();
+    //Check if user has provided every entry
     if (!firstName || !lastName || !email || !confirmEmail || !password) {
         return res.status(400).json({ message: 'Please enter all fields' });
     }
@@ -30,8 +32,24 @@ router.post('/signup', async (req, res) => {
         //Save user to DB
         await user.save();
 
+        //Generate JWT Token
+        const token = jwt.sign(
+            { userId: user._id, email: user.email },
+            process.env.JWT_SECRET,
+            { expiresIn: "2h"}
+        );
+
         //Confirm a sucessful registration
-        res.status(201).json({ message: 'User registered successfully' });
+        res.status(201).json({ 
+            message: 'User registered successfully',
+            token,
+        user: {
+            _id: user._id,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
+        },
+     });
     } catch (error) {
         res.status(500).json({ message: 'Server error', error: error.message });
     }
@@ -40,7 +58,8 @@ router.post('/signup', async (req, res) => {
 //Login an existing user
 router.post('/login', async (req, res) => {
     console.log('Request Body:', req.body);
-    const { email, password } = req.body;
+    const email = req.body.email.toLowerCase();
+    const { password } = req.body;
     
     if (!email || !password) {
         return res.status(400).json({ message: 'Please provide email and password' });
@@ -88,6 +107,11 @@ router.post('/book-service', async (req, res) => {
     if (!validServices.includes(service)) {
         return res.status(400).json({ message: "Invalid service selected" });
     }
+    //check if the userID is valid
+    if (!userId || !mongoose.Types.ObjectId.isValid(userId)) {
+        return res.status(400).json({ message: "Invalid or missing user ID"});
+    }
+
     try {
         //find users by their id
         const user = await User.findById(userId);
