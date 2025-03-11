@@ -1540,4 +1540,18 @@ html, body {
     font-weight: bold;
     font-family: "Aoboshi One", serif;
 }
+.privacy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    font-family: "Aoboshi One", serif;
+}
+.privacy-container h1 {
+    margin: 40px;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Aoboshi One", serif;
+}
 

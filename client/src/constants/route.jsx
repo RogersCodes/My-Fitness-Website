@@ -12,6 +12,7 @@ import ProtectedRoute from '../components/Dashboard/DashboardProtectedroute';
 import CategoryBlogs from '../components/Blogs/CategoryBlogs';
 import FullBlog from '../components/Blogs/FullBlog';
 import Terms from '../components/TermsOfService/Terms';
+import Privacy from '../components/Privacy/Privacy';
 
 const ROUTES = [
   {
@@ -62,6 +63,10 @@ const ROUTES = [
   {
     path: '/terms',
     element: <Terms />,
+  },
+  {
+    path: '/privacy',
+    element: <Privacy />,
   }
 ];
 
