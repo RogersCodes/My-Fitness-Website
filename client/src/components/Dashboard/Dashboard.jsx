@@ -51,7 +51,7 @@ const Dashboard = () => {
     }
     try {
       const response = await fetch(
-        "http://localhost:8080/api/auth/book-service",
+        "https://my-fitness-website-3bbj.onrender.com/api/auth/book-service",
         {
           method: "POST",
           headers: {

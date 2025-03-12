@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://rogersfitnessclub.netlify.app/',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'OPTIONS'],
     credentials: true,
