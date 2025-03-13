@@ -11,13 +11,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.use(cors({
+// ✅ CORS Configuration
+const corsOptions = {
     origin: 'https://rogersfitnessclub.netlify.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
     credentials: true,
     maxAge: 86400
-}));
+};
+
+app.use(cors(corsOptions));
+
+// ✅ Explicitly handle preflight (OPTIONS) requests
+app.options('*', cors(corsOptions)); 
 
 
 app.post('/dashboard', (req, res) => {
