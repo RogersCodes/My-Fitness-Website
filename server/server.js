@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // ✅ CORS Configuration
 const corsOptions = {
-    origin: 'https://rogersfitnessclub.netlify.app',
+    origin: ['https://rogersfitnessclub.netlify.app', 'https://rogersfitnessclub.co.ke'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
     credentials: true,
