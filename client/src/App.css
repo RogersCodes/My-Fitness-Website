@@ -341,14 +341,111 @@ html, body {
         padding: 6px 16px;
     }
 }
+/*Component styling*/
+.component {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin-top: -16px;
+    position: relative;
+}
+
+.component-image {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    z-index: 0;
+}
+.component-text {
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 32px;
+    top: 30%;
+    left: 20px;
+    font-size: 32px;
+    padding: 20px;
+    font-weight: bold;
+    color: #E9DCC9;
+    font-family: "Aoboshi One", serif;
+    font-style: normal;
+}
+.component-button {
+    margin-top: 16px;
+    padding: 10px 20px;
+    border: none;
+    font-family: "Aoboshi One", serif;
+    font-weight: 400;
+    transition: background-color 0.4s ease;;
+    cursor: pointer;
+    font-size: 32px;
+    border-radius: 8px;
+    background-color: #847575;
+    color: #FFFFFF;
+}
+.component-button:hover {
+    background-color: #5B4848;
+    color: #000000;
+}
+.component-overlay {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #7D5E5E;
+    opacity: 40%;
+}
+/* Mobile (small screens) */
+@media screen and (max-width: 480px) {
+    .component-text {
+        font-size: 20px;
+        top: 20%;
+        left: 10px;
+        padding: 10px;
+    }
+
+    .component-button {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}
+
+/* Tablets (medium screens) */
+@media screen and (max-width: 768px) {
+    .component-text {
+        font-size: 24px;
+        top: 25%;
+        left: 15px;
+    }
+
+    .component-button {
+        font-size: 24px;
+        padding: 10px 18px;
+    }
+}
+
+/* Large screens (Desktops, TVs) */
+@media screen and (min-width: 1440px) {
+    .component-text {
+        font-size: 36px;
+        max-width: 60%;
+        left: auto;
+    }
+
+    .component-button {
+        font-size: 36px;
+        padding: 12px 24px;
+    }
+}
 
 /*Mental styling*/
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-}
 .mental {
     width: 100%;
     height: 100vh;
@@ -419,12 +516,6 @@ html, body {
     font-weight: bold;
 }
 /*Philosophy*/
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-}
 .philosophy {
     display: flex;
     justify-content: center;
@@ -702,12 +793,6 @@ html, body {
 /*Workouts-section-four styling*/
 
 /*Nutrition styling*/
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-}
 .nutrition{
     width: 100%;
     height: 100vh;
@@ -1023,74 +1108,7 @@ main {
     padding-top: 90px;
     text-align: center;
 }
-/*Component styling*/
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-}
-.component {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    padding: 0;
-    margin-top: -16px;
-    position: relative;
-}
 
-
-.component-image {
-    width: 110%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    z-index: 0;
-}
-.component-text {
-    position: absolute;
-    z-index: 10;
-    text-align: center;
-    margin-bottom: 32px;
-    top: 30%;
-    left: 20px;
-    font-size: 32px;
-    padding: 20px;
-    font-weight: bold;
-    color: #E9DCC9;
-    font-family: "Aoboshi One", serif;
-    font-style: normal;
-}
-.component-button {
-    margin-top: 16px;
-    padding: 10px 20px;
-    border: none;
-    font-family: "Aoboshi One", serif;
-    font-weight: 400;
-    transition: background-color 0.4s ease;;
-    cursor: pointer;
-    font-size: 32px;
-    border-radius: 8px;
-    background-color: #847575;
-    color: #FFFFFF;
-}
-.component-button:hover {
-    background-color: #5B4848;
-    color: #000000;
-}
-.component-overlay {
-    z-index: 5;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background-color: #7D5E5E;
-    opacity: 40%;
-}
 
 /*Footer styling*/
 html, body {
