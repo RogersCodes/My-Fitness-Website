@@ -1346,55 +1346,54 @@ main {
 
 
 /*Footer styling*/
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-}
 .footer {
-    height: 200px;
+    height: auto;
     width: 100%;
     position: relative;
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
     background-color: rgba(95, 101, 110, 0.5);
-}
-.footer-text {
-    margin-bottom: 30px;
     text-align: center;
+}
+
+.footer-text {
+    margin-bottom: 20px;
     font-family: "Aoboshi One", serif;
     font-style: normal;
     font-weight: bold;
-    
+    max-width: 80%;
 }
+
+.highlight-footer-text {
+    color: #A01818;
+}
+
 .email-form {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.highlight-footer-text {
-    color: #A01818;
-}
-.email-form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Reduced for better spacing */
     padding: 10px;
+    width: 100%;
+    max-width: 600px;
 }
-.footer-input{
+
+.footer-input {
     height: 40px;
     border-radius: 8px;
     border: none;
-    width: 400px;
+    width: 100%;
+    max-width: 350px; /* Adjust width for better responsiveness */
+    padding: 5px 10px;
 }
+
 .email-button {
     height: 40px;
-    width: 200px;
+    width: 150px; /* Slightly reduced width */
     font-family: "Aoboshi One", serif;
     font-style: normal;
     font-weight: bold;
@@ -1405,10 +1404,33 @@ html, body {
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
+
 .email-button:hover {
     background-color: #1E1E1E;
     color: #FFFFFF;
 }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .footer-text {
+        max-width: 90%;
+        font-size: 14px;
+    }
+
+    .email-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-input {
+        max-width: 100%;
+    }
+
+    .email-button {
+        width: 100%;
+    }
+}
+
 /*Exercrise styling*/
 .exercise {
     display: flex;
