@@ -16,18 +16,18 @@ function Navbar() {
           <div className="hamburger-menu" onClick={() => setIsMobile(!isMobile)}>
             {isMobile ? <FiX size={30} color="#fff" /> : <FiMenu size={30} color="#fff"/>}
           </div>
-          <ul className="navbar-list">
-            <li><NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink></li>
-            <li><NavLink to="/workouts" className={({ isActive }) => (isActive ? "active" : "")}>Workouts</NavLink></li>
-            <li><NavLink to="/nutrition" className={({ isActive }) => (isActive ? "active" : "")}>Nutrition</NavLink></li>
-            <li><NavLink to="/faqs" className={({ isActive }) => (isActive ? "active" : "")}>FAQS</NavLink></li>
-            <li><NavLink to="/blog" className={({ isActive }) => (isActive ? "active" : "")}>Blog</NavLink></li>
+          <ul className={`navbar-list ${isMobile ? "active": ""}`}>
+            <li><NavLink to="/" onClick={() => setIsMobile(false)}>Home</NavLink></li>
+            <li><NavLink to="/workouts" onClick={() => setIsMobile(false)}>Workouts</NavLink></li>
+            <li><NavLink to="/nutrition" onClick={() => setIsMobile(false)}>Nutrition</NavLink></li>
+            <li><NavLink to="/faqs" onClick={() => setIsMobile(false)}>FAQS</NavLink></li>
+            <li><NavLink to="/blog" onClick={() => setIsMobile(false)}>Blog</NavLink></li>
             <li>
-                <button className="login-button" onClick={() => navigate("/login")}>Login</button>
+                <button className="login-button" onClick={() => { navigate("/login"); setIsMobile(false); }}>Login</button>
               
             </li>
             <li>
-                <button className="signup-button" onClick={() => navigate("/signup")}>Join Now!</button>
+                <button className="signup-button" onClick={() => { navigate("/signup"); setIsMobile(false)}}>Join Now!</button>
             </li>
           </ul>
         </div>
