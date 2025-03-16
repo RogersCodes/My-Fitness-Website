@@ -1557,12 +1557,19 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    position: relative;
     width: 100%;
-    flex-direction: row;
     padding: 0;
     background-color: #D9D9D9;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 30px;
+    list-style-type: none;
 }
 .contact-title {
     white-space: nowrap;
@@ -1573,18 +1580,6 @@ main {
     font-family: "Aoboshi One", serif;
     font-style: normal;
 }
-.contact-list {
-    font-family: "Aoboshi One", serif;
-    font-style: normal;
-    font-weight: bold;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    padding: 30px;
-}
 .contact-list-item {
     margin-right: 90px;
 }
@@ -1593,7 +1588,7 @@ main {
     color:#735a5a;
     cursor: pointer;
     transition: transform 0.3s ease;
-    font-size: 18px;
+    font-family: "Aoboshi One", serif;
 }
 .contact-list-item a:hover {
     color:#312c2c;
@@ -1612,6 +1607,67 @@ main {
     width: 20px; 
     height: 20px;
 }
+@media screen and (max-width: 1024px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .contact-list-item {
+        margin-right: 30px;
+    }
+
+    .contact-images {
+        gap: 30px;
+        margin-right: 0;
+        padding: 20px;
+    }
+}
+
+/* Mobile View (Below 768px) */
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-title {
+        font-size: 24px; /* Smaller font size */
+        margin: 10px 0;
+    }
+
+    .contact-list {
+        flex-direction: column;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .contact-list-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .contact-images {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .instagram-image, .x-image, .email-image {
+        width: 30px; /* Slightly larger for mobile */
+        height: 30px;
+    }
+}
+
 /*signup page styling*/
 .signup {
     margin: 0 auto;
