@@ -455,15 +455,17 @@ html, body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background-color: rgba(85, 75, 75, 0.8); 
+    background-color: rgba(85, 75, 75, 0.8);
 }
+
 .mental-image {
     width: 50%;
-    object-position: right;
     height: 100%;
-    order: 2;
+    object-position: right;
     object-fit: cover;
+    order: 2;
 }
+
 .mental-text {
     display: flex;
     flex-direction: column;
@@ -477,8 +479,15 @@ html, body {
     color: #E9DCC9;
     font-family: "Aoboshi One", serif;
     font-style: normal;
-    top: 10px;
 }
+
+.mental-header {
+    margin-top: 90px;
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
 .mental-list {
     display: flex;
     flex-direction: column;
@@ -489,10 +498,11 @@ html, body {
     gap: 10px;
     padding: 0;
     max-width: 600px;
-    margin: 50px auto 0 auto; 
+    margin: 50px auto 0 auto;
     list-style: circle;
-    list-style-position: inside; 
+    list-style-position: inside;
 }
+
 .mental-button {
     padding: 10px 20px;
     border-radius: 8px;
@@ -505,15 +515,91 @@ html, body {
     margin-top: 30px;
     border: none;
 }
+
 .mental-button:hover {
     background-color: #5B4848;
     color: #FFFFFF;
 }
-.mental-header {
-    margin-top: 90px;
-    margin-bottom: 0;
-    font-size: 40px;
-    font-weight: bold;
+
+/* 📌 Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .mental {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .mental-image {
+        width: 100%;
+        height: 250px;
+        object-position: center;
+        order: 1; /* Image moves to the top */
+    }
+
+    .mental-text {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        order: 2;
+    }
+
+    .mental-header {
+        font-size: 26px;
+        margin-top: 20px;
+    }
+
+    .mental-list {
+        font-size: 18px;
+        line-height: 1.4;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .mental-button {
+        font-size: 16px;
+        padding: 10px 16px;
+        margin-top: 20px;
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+/* 📌 Tablet screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .mental {
+        flex-direction: column;
+        height: auto;
+        padding: 30px;
+    }
+
+    .mental-image {
+        width: 100%;
+        height: 300px;
+    }
+
+    .mental-text {
+        width: 90%;
+    }
+
+    .mental-list {
+        font-size: 20px;
+    }
+}
+
+/* 📌 Large screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .mental {
+        padding: 50px;
+    }
+
+    .mental-text {
+        font-size: 22px;
+    }
+
+    .mental-list {
+        font-size: 24px;
+    }
 }
 /*Philosophy*/
 .philosophy {
