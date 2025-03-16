@@ -1193,12 +1193,6 @@ html, body {
     color: #FFFFFF;
 }
 /*Exercrise styling*/
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-}
 .exercise {
     display: flex;
     justify-content: space-between;
@@ -1266,6 +1260,57 @@ html, body {
     margin: 30px 0 20px 0;
     list-style: circle;
     line-height: 1.5;
+}
+@media (max-width: 1024px) {
+    .exercise {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .exercise-image {
+        width: 100%;
+        height: auto;
+        object-position: center;
+        order: 0;
+    }
+
+    .exercise-text {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .exercise-header {
+        font-size: 32px;
+    }
+
+    .exercise-list {
+        font-size: 20px;
+        max-width: 100%;
+    }
+
+    .exercise-button {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .exercise-header {
+        font-size: 28px;
+    }
+
+    .exercise-list {
+        font-size: 18px;
+    }
+
+    .exercise-button {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
 }
 
 /*Contact styling*/
