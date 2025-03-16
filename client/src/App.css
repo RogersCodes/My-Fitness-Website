@@ -14,19 +14,20 @@ body, html {
     top: 0;
     left: 0;
     background-color: #2C2626;
+    padding: 10px 20px;
+    z-index: 1000;
 }
 .navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 10px 20px;
-    height: 80px;
 }
 .header-title {
     white-space: nowrap;
-    font-size: 40px;
+    font-size: 30px;
     margin: 0;
+    color: #7E686A;
 }
 .navbar-list .active {
     border-bottom: 4px solid #dbcbcb;
@@ -43,8 +44,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -69,10 +68,7 @@ header {
     background-color: #5B4848;
     color: #000000;
 }
- .header-title {
-    color: #7E686A;
-    font-size: 30px;
-}
+
 .navbar-list li a {
     color: #847575;
     transition: color 0.3s ease;
@@ -103,6 +99,97 @@ header {
 .signup-button:hover {
     background-color:#5B4848;
     color: #FFFFFF;
+}
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* 1. Small Smartphones (320px - 480px) */
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 24px; /* Smaller title */
+    }
+
+    .navbar-list {
+        display: none; /* Hide menu initially */
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: #2C2626;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .navbar-list.active {
+        display: flex;
+    }
+
+    .navbar-list li {
+        margin: 10px 0;
+    }
+
+    .login-button, .signup-button {
+        width: 90%;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show menu icon */
+    }
+}
+/* 2. Tablets (481px - 1024px) */
+@media (max-width: 1024px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navbar-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: #2C2626;
+        padding: 20px 0;
+    }
+
+    .navbar-list.active {
+        display: flex;
+    }
+
+    .navbar-list li {
+        margin: 15px 0;
+    }
+
+    .login-button, .signup-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* 3. Large Screens (MacBook Air and Bigger) */
+@media (min-width: 1440px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .header-title {
+        font-size: 36px;
+    }
+
+    .navbar-list li a {
+        font-size: 18px;
+    }
+
+    .login-button, .signup-button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
 }
 /*Navrbar styling*/
 
