@@ -705,7 +705,7 @@ header {
 }
 
  /* Workouts page 1st section styling*/
-.workouts-section-one {
+ .workouts-section-one {
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -715,6 +715,7 @@ header {
     background-color: rgba(96, 84, 84, 0.8); 
     overflow: hidden; 
 }
+
 .workouts-section-one-text {
     display: flex;
     flex-direction: column;
@@ -725,7 +726,9 @@ header {
     margin-top: 90px;
     font-family: "Aoboshi One", serif;
     font-style: normal;
+    text-align: center;
 }
+
 .cable-row {
     width: 50%;
     object-position: right;
@@ -733,13 +736,16 @@ header {
     order: 2;
     object-fit: cover;
 }
+
 .workouts-heading {
     font-size: 40px;
-    color: #e09c9c ;
+    color: #e09c9c;
 }
+
 .workouts-part-of-team {
     font-family: "Times New Roman", Times, serif;
 }
+
 .workouts-button {
     cursor: pointer;
     border: none;
@@ -753,12 +759,41 @@ header {
     padding: 10px;
     margin: 20px;
 }
+
 .workouts-button:hover {
     background-color: #958282;
     color: rgb(209, 228, 228);
     transform: scale(1.1);
 }
-/* Workouts page 1st section styling*/
+@media (max-width: 1024px) {
+    .workouts-section-one {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .workouts-section-one-text, .cable-row {
+        width: 100%;
+    }
+    
+    .cable-row {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .workouts-heading {
+        font-size: 30px;
+    }
+    
+    .workouts-section-one-text {
+        padding: 15px;
+    }
+    
+    .workouts-button {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
 
 /*Workouts page 2nd section styling*/
 *,
@@ -766,6 +801,7 @@ header {
 *::after {
     box-sizing: border-box;
 }
+
 .workouts-section-two {
     display: flex;
     justify-content: center;
@@ -777,17 +813,19 @@ header {
     background-color: rgba(76, 67, 67, 0.8); 
     overflow: hidden;
 }
+
 .workouts-section-two-text {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     font-family: "Aoboshi One", serif;
     font-style: normal;
-    margin-top: 90px;
+    text-align: center;
 }
+
 .workouts-results {
     width: 50%;
     object-position: right;
@@ -795,19 +833,20 @@ header {
     order: 2;
     object-fit: cover;
 }
+
 .workouts-section-two-text-header {
     font-size: 40px;
     color: rgb(238, 201, 177);
 }
 .workouts-section-two-button {
-    margin: 50px;
+    margin: 30px;
     font-family: "Aoboshi One", serif;
     font-style: normal;
     border: none;
     border-radius: 5px;
     font-size: 20px;
     padding: 10px;
-    transition: background-color 0.3s ease, filter 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     background-color: rgb(200, 231, 231);
     color: rgb(21, 5, 5);
@@ -816,12 +855,59 @@ header {
     filter: brightness(1.1);
     transform: scale(1.1);
 }
+@media (max-width: 1024px) {
+    .workouts-section-two {
+        flex-direction: column;
+        height: auto;
+    }
+    .workouts-results, .workouts-section-two-text {
+        width: 100%;
+        height: auto;
+    }
+    .workouts-results {
+        order: 0;
+    }
+    .workouts-section-two-text {
+        padding: 20px;
+    }
+    .workouts-section-two-text-header {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .workouts-section-two-text-header {
+        font-size: 24px;
+    }
+    .workouts-section-two-text {
+        padding: 15px;
+    }
+    .workouts-section-two-button {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .workouts-section-two-text-header {
+        font-size: 20px;
+    }
+    .workouts-section-two-text {
+        padding: 10px;
+    }
+    .workouts-section-two-button {
+        font-size: 16px;
+        padding: 6px;
+    }
+}
+
 /*Workouts-section-three styling*/
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
 .workouts-section-three {
     display: flex;
     justify-content: center;
@@ -829,20 +915,23 @@ header {
     flex-direction: row;
     position: relative;
     height: 100vh;
-    background-color: rgba(164, 150, 150, 0.8); 
-    overflow: hidden; 
+    width: 100%;
+    background-color: rgba(76, 67, 67, 0.8); 
+    overflow: hidden;
 }
+
 .workouts-section-three-text {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     font-family: "Aoboshi One", serif;
     font-style: normal;
-    margin-top: 90px;
+    text-align: center;
 }
+
 .workouts-section-three-img {
     width: 50%;
     object-position: right;
@@ -850,13 +939,12 @@ header {
     order: 2;
     object-fit: cover;
 }
+
 .workouts-section-three-header {
     font-size: 40px;
-    color: rgb(93, 79, 50);
+    color: rgb(238, 201, 177);
 }
-.workouts-section-three-join {
-    font-family:  "Times New Roman", Times, serif;
-}
+
 .workouts-section-three-button {
     margin: 30px;
     font-family: "Aoboshi One", serif;
@@ -865,19 +953,76 @@ header {
     border-radius: 5px;
     font-size: 20px;
     padding: 10px;
-    transition: background-color 0.3s ease, filter 0.3s ease;
-    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
-    background-color: rgb(41, 46, 46);
-    color: rgb(212, 203, 203);
+    background-color: rgb(200, 231, 231);
+    color: rgb(21, 5, 5);
 }
+
 .workouts-section-three-button:hover {
     filter: brightness(1.1);
     transform: scale(1.1);
 }
-/*Workouts-section-three styling*/
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .workouts-section-three {
+        flex-direction: column;
+        height: auto;
+    }
+    .workouts-section-three-img, .workouts-section-three-text {
+        width: 100%;
+        height: auto;
+    }
+    .workouts-section-three-img {
+        order: 0;
+    }
+    .workouts-section-three-text {
+        padding: 20px;
+    }
+    .workouts-section-three-header {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .workouts-section-three-header {
+        font-size: 24px;
+    }
+    .workouts-section-three-text {
+        padding: 15px;
+    }
+    .workouts-section-three-button {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .workouts-section-three-header {
+        font-size: 20px;
+    }
+    .workouts-section-three-text {
+        padding: 10px;
+    }
+    .workouts-section-three-button {
+        font-size: 16px;
+        padding: 6px;
+    }
+}
 
 /*Workouts-section-four styling*/
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.workouts-section-four {
+    background-color: #c9c8d2;
+    overflow: hidden;
+    padding: 20px;
+}
+
 .workouts-section-four-header {
     display: flex;
     justify-content: center;
@@ -885,53 +1030,65 @@ header {
     font-family: "Aoboshi One", serif;
     font-style: normal;
     font-size: 40px;
-    color:rgba(82, 67, 67, 0.71)
+    color: rgba(82, 67, 67, 0.71);
+    text-align: center;
 }
+
 .workouts-section-four-para {
     text-align: center;
-    font-family:  "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-style: normal;
     font-size: 18px;
 }
+
 .workouts-section-four-action {
     text-align: center;
     font-size: 18px;
     font-family: "Aoboshi One", serif;
     font-style: normal;
 }
+
 .highlight-section-four {
-    color:#cf3434;
+    color: #cf3434;
 }
+
 .workouts-section-four-action-news {
     text-align: center;
     font-family: "Aoboshi One", serif;
     font-style: normal;
 }
+
 .workouts-section-four-table {
     border-collapse: collapse;
     margin: auto;
-    width: 70%;
+    width: 90%;
+    max-width: 800px;
     border: 1px solid #463d3d;
 }
+
 .workouts-section-four-table td::before {
     content: "•";
     margin-right: 8px;
-    font-weight: bold; 
+    font-weight: bold;
 }
+
 .workouts-section-four-table td {
-    font-family:  "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 18px;
 }
+
 .workouts-section-four-table, td, th {
     text-align: left;
     border: 1px solid #463d3d;
-    padding: 8px 80px;
+    padding: 8px 40px;
 }
+
 .workouts-section-four-table th {
-    padding: 20px 80px;
+    padding: 20px 40px;
     font-family: "Aoboshi One", serif;
     font-style: normal;
 }
+
 .table-caption {
     text-align: center;
     font-weight: bold;
@@ -939,11 +1096,55 @@ header {
     font-family: "Aoboshi One", serif;
     font-style: normal;
 }
-.workouts-section-four {
-    background-color: #c9c8d2;
-    overflow: hidden;
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .workouts-section-four-header {
+        font-size: 32px;
+    }
+    .workouts-section-four-table {
+        width: 90%;
+    }
+    .workouts-section-four-table, td, th {
+        padding: 8px 30px;
+    }
 }
-/*Workouts-section-four styling*/
+
+@media screen and (max-width: 768px) {
+    .workouts-section-four-header {
+        font-size: 28px;
+    }
+    .workouts-section-four-para {
+        font-size: 16px;
+    }
+    .workouts-section-four-table, td, th {
+        padding: 6px 20px;
+    }
+    .workouts-section-four-table td {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .workouts-section-four-header {
+        font-size: 24px;
+    }
+    .workouts-section-four-para {
+        font-size: 14px;
+    }
+    .workouts-section-four-table {
+        width: 100%;
+    }
+    .workouts-section-four-table, td, th {
+        padding: 4px 10px;
+    }
+    .workouts-section-four-table td {
+        font-size: 14px;
+    }
+    .workouts-section-four-action {
+        font-size: 16px;
+    }
+}
 
 /*Nutrition styling*/
 .nutrition{
@@ -1013,7 +1214,6 @@ header {
     text-indent: -10px;
     padding-left: 20px;
 }
-/* Mobile screens (max-width: 480px) */
 @media (max-width: 480px) {
     .nutrition {
         flex-direction: column;
@@ -1025,10 +1225,10 @@ header {
 
     .nutrition-image {
         width: 100%;
-        height: 250px; /* Ensure visibility */
+        height: 250px;
         object-fit: cover;
         object-position: center;
-        order: 1; /* Image on top */
+        order: 1;
     }
 
     .nutrition-text {
@@ -1057,8 +1257,6 @@ header {
         max-width: 250px;
     }
 }
-
-/* Tablet screens (max-width: 768px) */
 @media (max-width: 768px) {
     .nutrition {
         flex-direction: column;
@@ -1080,7 +1278,6 @@ header {
     }
 }
 
-/* Large screens (min-width: 1024px) */
 @media (min-width: 1024px) {
     .nutrition {
         padding: 50px;
@@ -1095,13 +1292,14 @@ header {
     }
 }
 
-/*Nutrition-page*/
+/*Home page nutrition*/
 .nutrition-header {
     margin-top: 40px;
     margin-bottom: 0;
     font-size: 40px;
     font-weight: bold;
 }
+/*Nutrition-page*/
 .nutrition-section-one {
     display: flex;
     justify-content: center;
@@ -1162,6 +1360,60 @@ header {
 .nutrition-section-one-para, .nutrition-section-one-second {
    padding: 10px;
 }
+@media screen and (max-width: 1024px) {  /* Tablets */
+    .nutrition-section-one {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .nutrition-section-one-text {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .fish {
+        width: 100%;
+        height: auto;
+        order: -1; /* Moves image above text */
+    }
+
+    .nutrition-one-header {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {  /* Small tablets & large phones */
+    .nutrition-section-one-text {
+        padding: 15px;
+    }
+
+    .nutrition-one-header {
+        font-size: 25px;
+    }
+
+    .nutrition-section-one-button {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {  /* Phones */
+    .nutrition-section-one {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nutrition-one-header {
+        font-size: 22px;
+    }
+
+    .nutrition-section-one-button {
+        font-size: 16px;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
 /*Nutrition-section-one styling*/
 
 /*Nutrition-section-two styling*/
@@ -1175,12 +1427,15 @@ header {
     height: 100vh;
     background-color: #968b8a;
 }
+
 .nutrition-three-food {
     width: 50%;
     object-position: right;
     order: 2;
-    object-fit: cover;;
+    object-fit: cover;
+    height: 100%;
 }
+
 .nutrition-section-two-text {
     width: 50%;
     display: flex;
@@ -1189,15 +1444,17 @@ header {
     align-items: center;
     font-family: "Aoboshi One", serif;
     font-style: normal;
-    margin: 30px;;
+    margin: 30px;
     padding: 20px;
 }
+
 .nutrition-section-two-header {
     text-align: center;
     font-size: 40px;
     color: #514747;
     margin-top: 20px;
 }
+
 .nutrition-section-two-button {
     cursor: pointer;
     border: none;
@@ -1208,25 +1465,104 @@ header {
     padding: 10px;
     margin-top: 40px;
     transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
-    color:#524c4c;
+    color: #524c4c;
     background-color: #eee2e2;
 }
+
 .nutrition-section-two-button:hover {
     background-color: #d8c6c6;
     color: #3d3a3a;
     opacity: 1;
 }
-/*Nutrition-section-two-styling*/
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {  /* Tablets */
+    .nutrition-section-two {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nutrition-three-food {
+        width: 100%;
+        height: 50vh;
+        object-position: center;
+    }
+
+    .nutrition-section-two-text {
+        width: 100%;
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .nutrition-section-two-header {
+        font-size: 35px;
+    }
+
+    .nutrition-section-two-button {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {  /* Small tablets & large phones */
+    .nutrition-three-food {
+        height: 40vh;
+    }
+
+    .nutrition-section-two-text {
+        padding: 10px;
+        margin: 15px;
+    }
+
+    .nutrition-section-two-header {
+        font-size: 30px;
+    }
+
+    .nutrition-section-two-button {
+        font-size: 16px;
+        padding: 10px;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {  /* Phones */
+    .nutrition-section-two {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nutrition-three-food {
+        height: 35vh;
+    }
+
+    .nutrition-section-two-text {
+        padding: 8px;
+        margin: 10px;
+    }
+
+    .nutrition-section-two-header {
+        font-size: 24px;
+    }
+
+    .nutrition-section-two-button {
+        font-size: 14px;
+        padding: 12px;
+        width: 100%;
+    }
+}
 
 /*Nutrition-section-three styling*/
 .nutrition-section-three {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     height: 100%;
     position: relative;
     overflow: hidden;
     background-color: #d6c7be;
+    padding: 40px;
 }
 .nutrition-section-three-text {
     padding: 40px;
@@ -1237,8 +1573,6 @@ header {
     width: 60%;
 }
 .nutrition-section-three-header {
-    font-family: "Aoboshi One", serif;
-    font-style: normal;
     font-size: 40px;
     text-align: center;
     margin: auto;
@@ -1253,7 +1587,7 @@ header {
     font-size: 20px;
     transition: transform 0.3s ease, filter 0.3s ease;
     padding: 10px;
-    margin: auto;
+    margin-top: 20px;
     color: #514747;
     background-color: #e7e0e0;
 }
@@ -1263,7 +1597,46 @@ header {
 }
 .nutrition-section-three-call-to-act {
     font-size: 16px;
-    font-family:  "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, serif;
+}
+@media (max-width: 1024px) {
+    .nutrition-section-three {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .nutrition-section-three-text {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .nutrition-section-three-header {
+        font-size: 32px;
+    }
+
+    .nutrition-section-three-button {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+@media (max-width: 768px) {
+    .nutrition-section-three {
+        padding: 20px;
+    }
+
+    .nutrition-section-three-text {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .nutrition-section-three-header {
+        font-size: 28px;
+    }
+
+    .nutrition-section-three-button {
+        font-size: 16px;
+        padding: 6px;
+    }
 }
 /*Nutrition-section-four styling*/
 .nutrition-section-four {
@@ -1277,6 +1650,7 @@ header {
     overflow: hidden;
     background-color: #aaa9a9;
 }
+
 .nutrition-four-meal {
     width: 50%;
     object-fit: cover;
@@ -1299,6 +1673,49 @@ header {
     margin-top: 10px;
     color: #403e3e;
 }
+
+@media screen and (max-width: 1024px) {
+    .nutrition-section-four-text {
+        padding: 20px;
+        text-align: center;
+    }
+    .nutrition-section-four-header {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nutrition-section-four {
+        flex-direction: column;
+        height: auto;
+    }
+    .nutrition-four-meal {
+        width: 100%;
+        height: 250px;
+        order: 0;
+    }
+    .nutrition-section-four-text {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+    .nutrition-section-four-header {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nutrition-four-meal {
+        height: 200px;
+    }
+    .nutrition-section-four-header {
+        font-size: 25px;
+    }
+    .nutrition-section-four-text {
+        padding: 15px;
+    }
+}
+
 /*FAQS Page Styling */
 main {
     background-color: #f6eaea;
@@ -1410,7 +1827,6 @@ main {
     color: #FFFFFF;
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
     .footer-text {
         max-width: 90%;
