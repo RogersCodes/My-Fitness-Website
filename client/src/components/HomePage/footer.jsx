@@ -12,11 +12,12 @@ function Footer() {
         setStep(2); //Show names after users enter email
     };
     const handleFullFormSubmit = async (e) => {
+        e.preventDefault();
         if (!email || !firstName || !lastName) {
             setMessage("Plesae fill in all the fields.");
             return;
         }
-        const res = await fetch("http://localhost:3000/subscribe", {
+        const res = await fetch("https://my-fitness-website-3bbj.onrender.com/subscribe", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, firstName, lastName }),
@@ -40,7 +41,7 @@ function Footer() {
                 </p>
             </div>
             {step === 1 && (
-                <form className="email-form" onSubmit={handleEmailSubmit}>
+                <form className="email-form"  onSubmit={handleEmailSubmit}>
                     <input 
                         type="email"
                         placeholder="Your email"
