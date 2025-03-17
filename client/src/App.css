@@ -916,7 +916,7 @@ header {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-color: rgba(76, 67, 67, 0.8); 
+    background-color: rgba(50, 44, 44, 0.8); 
     overflow: hidden;
 }
 
@@ -963,8 +963,6 @@ header {
     filter: brightness(1.1);
     transform: scale(1.1);
 }
-
-/* Responsive Design */
 @media (max-width: 1024px) {
     .workouts-section-three {
         flex-direction: column;
@@ -1097,7 +1095,6 @@ header {
     font-style: normal;
 }
 
-/* Responsive styles */
 @media screen and (max-width: 1024px) {
     .workouts-section-four-header {
         font-size: 32px;
@@ -1720,16 +1717,48 @@ header {
 main {
     background-color: #f6eaea;
 }
+
 .faqs-header {
     margin-top: 130px;
-  }
+    text-align: center;
+}
+
 .faqs {
     font-family: "Aoboshi One", serif;
     font-style: normal;
     width: 60%;
-    margin-left: 180px;
+    margin: 0 auto;
     padding: 10px;
 }
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .faqs {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .faqs {
+        width: 90%;
+        font-size: 16px;
+    }
+    .faqs-header {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .faqs {
+        width: 95%;
+        font-size: 14px;
+        padding: 5px;
+    }
+    .faqs-header {
+        margin-top: 80px;
+    }
+}
+
 /* error page styling */
 .error-page {
     background-color: #ffffff ;
