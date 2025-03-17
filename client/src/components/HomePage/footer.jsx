@@ -17,7 +17,7 @@ function Footer() {
             setMessage("Plesae fill in all the fields.");
             return;
         }
-        const res = await fetch("https://my-fitness-website-3bbj.onrender.com/subscribe", {
+        const res = await fetch("https://my-fitness-website-3bbj.onrender.com/api/subscribe", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, firstName, lastName }),
