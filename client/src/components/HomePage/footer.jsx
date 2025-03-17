@@ -1,17 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Footer() {
+    const [email, setEmail] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [step, setStep] = useState(1); //1. email input, 2. Full form, 3: Success message
+    const [message, setMessage] = useState("");
+    const handleEmailSubmit = (e) => {
+        e.preventDefault();
+        if (!email) return;
+        setStep(2); //Show names after users enter email
+    };
+    const handleFullFormSubmit = async (e) => {
+        if (!email || !firstName || !lastName) {
+            setMessage("Plesae fill in all the fields.");
+            return;
+        }
+        const res = await fetch("http://localhost:3000/subscribe", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, firstName, lastName }),
+        });
+        const data = await res.json();
+        if (res.ok) {
+            setStep(3); //Success message
+            setMessage("🎉 Thank you for subscribing! Check your inbox for my latest guides.");
+        } else {
+            setMessage("something went wrong. Please try again.");
+        }
+    };
     return (
         <div className="footer">
             <div className="footer-text">
-                <h3 className="footer-header"><span className="highlight-footer-text">DON'T MISS OUT</span> GET MY WORKOUT AND NUTRITION TIPS STRAIGHT TO YOUR INBOX</h3>
-                <p className="footer-parting-shot">Get fitter and stronger with my latest guides, tutorial videos, and insider offers</p>
+                <h3 className="footer-header">
+                    <span className="highlight-footer-text">DON'T MISS OUT</span> GET MY WORKOUT AND NUTRITION TIPS STRAIGHT TO YOUR INBOX
+                </h3>
+                <p className="footer-parting-shot">
+                    Get fitter and stronger with my latest guides, tutorial videos, and insider offers
+                </p>
             </div>
-            <form className="email-form">
-                <input type="email" placeholder="Your email" aria-label="Email address" className="footer-input"></input>
-                <button type="submit" className="email-button" required>HIT ME</button>
-            </form>
+            {step === 1 && (
+                <form className="email-form" onSubmit={handleEmailSubmit}>
+                    <input 
+                        type="email"
+                        placeholder="Your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="footer-input"
+                        required
+                    />
+                    <button type="submit" className="email-button" required>HIT ME</button>
+                </form>
+            )}
+            {step === 2 && (
+                <form className="email-form" onSubmit={handleFullFormSubmit}>
+                    <input
+                        type="text"
+                        placeholder="First Name"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        className="footer-input"
+                        required
+                    />
+                    <input
+                        type="text"
+                        placeholder="Last Name"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
+                        className="footer-input"
+                        required
+                    />
+                    <button type="submit" className="email-button">Subscribe</button>
+                </form>
+            )}
+            {step === 3 && <p className="success-message">{message}</p>}
         </div>
-    )
+    );
 }
 export default Footer;
