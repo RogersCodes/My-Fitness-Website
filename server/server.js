@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
+const subscribeRoutes = require('./routes/subscribe');
 
 const app = express();
 
@@ -39,6 +40,7 @@ app.get('/', (req, res) => res.send('Fitness API is running'));
 
 //Authentication routes
 app.use('/api/auth', authRoutes);
+app.use('/api/subscribe', subscribeRoutes);
 
 //Start the server
 const PORT = process.env.PORT || 8080;
