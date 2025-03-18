@@ -18,6 +18,27 @@ router.post('/', async (req, res) => {
         //Save subscriber to MongoDB
         const newSubscriber = new Subscriber({ email, firstName, lastName });
         await newSubscriber.save();
+        const mailOptions = {
+            from: `"Rogers Fitness Club" <${process.env.EMAIL_USER}>`,
+            to: email,
+            subject: "Welcome to Rogers Fitness Club!",
+            html: `
+            <h2> Welcome, ${firstName}!</h2>
+            <p>Thank you for subscribing to my fitness newsletters.</p>
+            <p>I know that this year started off rough but you can always focus on self-improvement.</p> 
+            <p>I am here to guide you in your fitness journey.</P>
+            <p>I was once in the same place as you are right now, trying to gain muscle or lose some weight, whatever it is that you want to improve.</p>
+            <p>My nutrition and workout plans cover all the factors that you may be missing such as supplementation, meal timing, meal planning, insulin optimization, weight loss, muscle gain, or even maintenance!</p>
+            <p>Expect workout tips, nutrition guides, and exclusive fitness content straight to your inbox.</p>
+            <p>Respond to this email with goals that you want to achieve this year, and I will guide through the journey.</p>
+            <p>Stay fit and stay motivated!</p>
+            <br>
+            <strong>Rogers Fitness Club</strong>
+            `,
+        };
+        await transporter.sendMail(mailOptions);
+
+        
         res.status(201).json({
             message: "🎉 Thank you for subscribing! Check your inbox for my latest guides.",
         });
