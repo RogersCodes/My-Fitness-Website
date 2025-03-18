@@ -1,7 +1,9 @@
 import React from 'react';
-import InstagramIcon from '../assets/images/Group 2.png';
-import XIcon from '../assets/images/Vector.png';
-import EmailIcon from '../assets/images/Group.png';
+import InstagramIcon from '../../assets/images/Insta.png';
+import XIcon from '../../assets/images/X.png';
+import EmailIcon from '../../assets/images/Mail.png';
+
+
 
 function Contact() {
     return (
