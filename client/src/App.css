@@ -2497,4 +2497,16 @@ main {
     font-weight: bold;
     font-family: "Aoboshi One", serif;
 }
-
+/*email subscription message*/
+.error-message {
+    color: rgb(209, 45, 45);
+    font-weight: bold;
+    font-family: "Aoboshi One", serif;
+    font-size: 1rem;
+}
+.success-message {
+    color: #0f0e0e;
+    font-weight: bold;
+    font-family: "Aoboshi One", serif;
+    font-size: 1rem;
+}
