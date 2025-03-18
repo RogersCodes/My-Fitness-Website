@@ -14,22 +14,30 @@ function Footer() {
     const handleFullFormSubmit = async (e) => {
         e.preventDefault();
         if (!email || !firstName || !lastName) {
-            setMessage("Plesae fill in all the fields.");
+            setMessage("Please fill in all the fields.");
             return;
         }
-        const res = await fetch("https://my-fitness-website-3bbj.onrender.com/api/subscribe", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, firstName, lastName }),
-        });
-        const data = await res.json();
-        if (res.ok) {
-            setStep(3); //Success message
-            setMessage("🎉 Thank you for subscribing! Check your inbox for my latest guides.");
-        } else {
-            setMessage(data.message || "Something went wrong. Please try again.");
+    
+        try {
+            const res = await fetch("https://my-fitness-website-3bbj.onrender.com/api/subscribe", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, firstName, lastName }),
+            });
+    
+            const data = await res.json();
+    
+            if (res.ok) {
+                setStep(3); // Show success message
+                setMessage("🎉 Thank you for subscribing! Check your inbox for my latest guides.");
+            } else {
+                setMessage(data.message); // Display the actual error message from the backend
+            }
+        } catch (error) {
+            setMessage("Something went wrong. Please try again.");
         }
     };
+    
     return (
         <div className="footer">
             <div className="footer-text">
