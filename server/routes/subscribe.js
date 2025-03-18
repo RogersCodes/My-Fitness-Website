@@ -53,7 +53,7 @@ router.post('/', async (req, res) => {
             message: "🎉 Thank you for subscribing! Check your inbox for my latest guides.",
         });
     } catch (error) {
-        console.error("Subscription error:", error);
+        console.error("Subscription error:", error.message, error.stack);
         res.status(500).json({ message: "Server error. Please try again later."});
     }
 });
