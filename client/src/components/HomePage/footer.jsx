@@ -59,6 +59,7 @@ function Footer() {
                         required
                     />
                     <button type="submit" className="email-button" required>HIT ME</button>
+                    {message && <p className="error-message">{message}</p>}
                 </form>
             )}
             {step === 2 && (
@@ -80,6 +81,7 @@ function Footer() {
                         required
                     />
                     <button type="submit" className="email-button">Subscribe</button>
+                    {message && <p className="error-message">{message}</p>}
                 </form>
             )}
             {step === 3 && <p className="success-message">{message}</p>}
