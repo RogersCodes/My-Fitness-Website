@@ -27,7 +27,7 @@ function Footer() {
             setStep(3); //Success message
             setMessage("🎉 Thank you for subscribing! Check your inbox for my latest guides.");
         } else {
-            setMessage("something went wrong. Please try again.");
+            setMessage(data.message || "Something went wrong. Please try again.");
         }
     };
     return (
