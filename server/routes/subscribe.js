@@ -3,7 +3,9 @@ const express = require("express");
 const router = express.Router();
 const Subscriber = require("../models/subscriber");
 const nodemailer = require("nodemailer");
-
+//debug
+console.log("Email User:", process.env.EMAIL_USER);
+console.log("Email Pass:", process.env.EMAIL_PASS ? "Loaded" : "Not Loaded");
 //nodemailer setup
 const transporter = nodemailer.createTransport({
     service: "gmail",
