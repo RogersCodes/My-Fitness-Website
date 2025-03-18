@@ -1,6 +1,16 @@
 const express = require("express");
 const router = express.Router();
 const Subscriber = require("../models/subscriber");
+const nodemailer = require("nodemailer");
+
+//nodemailer setup
+const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,  
+    },
+});
 
 //Newsletter subscription route
 router.post('/', async (req, res) => {
@@ -38,7 +48,7 @@ router.post('/', async (req, res) => {
         };
         await transporter.sendMail(mailOptions);
 
-        
+
         res.status(201).json({
             message: "🎉 Thank you for subscribing! Check your inbox for my latest guides.",
         });
